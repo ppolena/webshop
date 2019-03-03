@@ -1,4 +1,4 @@
-package webshop.webshop;
+package webshop;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
