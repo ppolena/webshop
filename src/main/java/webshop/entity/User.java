@@ -3,6 +3,8 @@ package webshop.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.Length;
 
@@ -15,8 +17,10 @@ import javax.validation.constraints.Size;
 import java.time.Instant;
 
 @Data
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User extends BaseEntity {
 
     @NotNull
@@ -39,8 +43,8 @@ public class User extends BaseEntity {
     private String email;
 
     @CreationTimestamp
-    @Column(name = "joinDate", nullable = false, updatable = false)
-    private Instant joinDate;
+    @Column(name = "registrationDate", nullable = false, updatable = false)
+    private Instant registrationDate;
 
     @NotNull
     @Size(min = 8)

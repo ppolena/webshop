@@ -1,6 +1,8 @@
 package webshop.entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Column;
@@ -10,6 +12,8 @@ import javax.persistence.MappedSuperclass;
 import java.util.UUID;
 
 @Data
+@ToString
+@EqualsAndHashCode
 @MappedSuperclass
 public class BaseEntity {
 
