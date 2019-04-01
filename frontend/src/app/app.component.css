@@ -57,9 +57,13 @@ p {
     margin-top: 25px;
 }
 
-li {
+mat-list {
     margin-top: 50px;
     font-size: 20px;
+}
+
+.mat-list-base .mat-list-item {
+    color: white;
 }
 
 .mat-raised-button {
