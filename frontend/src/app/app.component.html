@@ -1,20 +1,134 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<mat-toolbar>
+  <button mat-button href="/issues">Kezdőlap</button>
+  <button mat-button href="/issues">Termékek</button>
+  <button mat-button href="/issues/add">Kapcsolat</button>
+  <button mat-button href=""><mat-icon style="margin-left: 1000px;">shopping_cart</mat-icon></button>
+  <button mat-button href=""><mat-icon style="margin-left: 40px;">account_circle</mat-icon></button>
+</mat-toolbar>
+
+<!--Carousel Image Slider-->
+
+<carousel>
+  
+  <slide>
+    <img src="https://picscdn.redblue.de/doi/msh-pixelboxx-1269807497/feecms_x_x_x" alt="first slide" style="display: block; width: 100%;">
+    <div class="carousel-caption d-none d-md-block">
+      <!---
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      -->
+    </div>
+  </slide>
+  <slide>
+    <img src="https://picscdn.redblue.de/doi/msh-pixelboxx-898436806/feecms_x_x_x" alt="second slide" style="display: block; width: 100%;">
+    <div class="carousel-caption d-none d-md-block">
+      <!---
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      -->
+    </div>
+  </slide>
+  <slide>
+    <img src="https://picscdn.redblue.de/doi/msh-pixelboxx-729754128/feecms_x_x_x" alt="third slide" style="display: block; width: 100%;">
+    <div class="carousel-caption d-none d-md-block">
+      <!---
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      -->
+    </div>
+  </slide>
+</carousel>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis urna felis, sit amet varius elit blandit vel. In condimentum, leo sed aliquam accumsan, ante tellus eleifend erat, eu rutrum justo velit vel nibh. Donec tristique aliquet dolor vitae fringilla. Vivamus condimentum quam in posuere posuere. Nullam mattis felis ac dolor aliquet fringilla. Donec gravida imperdiet lacus at scelerisque. Cras non interdum dolor, id rutrum nibh. Fusce consequat mi a ante ullamcorper, sed varius nisi elementum. 
+  </p>
+
+
+  <mat-card class="example-card">
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" style="width: 300px;">
+      <mat-card-content>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis urna felis...
+        </p>
+      </mat-card-content>
+      <mat-card-footer class="footer-card">
+          
+          <mat-card-actions class="button">
+              <p>10 500FT</p>
+              <button mat-button style="color: white;
+                                        text-align: center;"><mat-icon style="color: white;
+                                                                              text-align: center;">star_rate</mat-icon>Tedd a kosárba!</button>
+            </mat-card-actions>
+      </mat-card-footer>
+    </mat-card>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">ELÉRHETŐSÉG</h5>
+
+        <!-- this creates a google map on the page with the given lat/lng from -->
+        <!-- the component as the initial center of the map: -->
+        <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          
+
+          <ul class="list-unstyled">
+            <li>
+              <mat-icon>place</mat-icon> 1125 Budapest Alkotás út 3.
+            </li>
+            <li>
+              <mat-icon>mobile_screen_share</mat-icon> (+36 30) 211 5678
+            </li>
+            <li>
+              <mat-icon>email</mat-icon> marketing@webshop.hu
+            </li>
+            <li>
+                <div class="example-button-row">
+                    <a mat-raised-button routerLink=".">ÚTVONAL TERVEZÉS</a>
+                </div>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        
+
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="https://mdbootstrap.com/education/angular/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
