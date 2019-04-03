@@ -26,6 +26,10 @@ HELP.md
 /nbdist/
 /.nb-gradle/
 
+# System Files
+.DS_Store
+Thumbs.db
+
 ### Eclipse ###
 .metadata
 bin/
