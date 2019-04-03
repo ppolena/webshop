@@ -38,7 +38,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-### Eclipse ###
 .metadata
 bin/
 tmp/
