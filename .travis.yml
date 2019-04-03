@@ -1,7 +1,8 @@
 language: java
+install: true
 script:
   - cd backend
-  - ./gradlew check
+  - ./gradlew clean build
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
