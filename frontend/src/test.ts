@@ -9,6 +9,16 @@ import {
 
 declare const require: any;
 
+describe('AppComponent', () => {
+  beforeEach(async(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          AppComponent,
+          NavComponent
+        ]
+      }).compileComponents();
+    }));
+
 // First, initialize the Angular testing environment.
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
