@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RoutingModule } from './routing/routing.module';
+import { Pipe} from '@angular/core';
+
 
 import { AppComponent } from './app.component';
 
@@ -15,11 +18,19 @@ import { AgmCoreModule } from '@agm/core';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
+import { IssueListComponent } from './issue-list/issue-list.component';
+import { IssueFormComponent } from './issue-form/issue-form.component';
+import { IssueDetailComponent } from './issue-detail/issue-detail.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IssueListComponent,
+    IssueFormComponent,
+    IssueDetailComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +45,10 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     }),
     CarouselModule.forRoot(),
     MatCardModule,
-    MatListModule
+    MatListModule,
+    RoutingModule,
+    Pipe, 
+
     
   ],
   exports: [

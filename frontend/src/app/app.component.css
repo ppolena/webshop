@@ -2,18 +2,8 @@ mat-icon {
     position: right;
 }
 
-carousel slide {
-    background: #374653;
-    left: 5px;
-    right: 5px;
-    
-}
-p {
-    margin: 50px;
-    text-align: center;
-    font-size: 26px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: regular;
+.icon-login-and-cart {
+    margin-left: 1000px;
 }
 
 .mat-toolbar {
@@ -22,36 +12,7 @@ p {
     margin-bottom: 50px;
 }
 
-.example-card {
-    max-width: 300px;
-    margin: 50px;
-  }
 
-.example-card p {
-    font-size: 16px;
-    text-align: inherit;
-    margin: 15px;
-}
-  
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
-
-.footer-card {
-    background: #374653;
-}
-
-.button p {
-    text-align: center;
-    font-size: 24px;
-    color: white;
-    font-weight: bold;
-}
-
-.button {
-    text-align: center;
-}
 
 .list-unstyled {
     margin-top: 25px;
@@ -73,9 +34,13 @@ mat-list {
 }
 
 footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
     color: white;
     background: #374653;
-    position: inherit;
+    overflow: hidden;
+    display: block;
 } 
 agm-map {
     height: 300px;
