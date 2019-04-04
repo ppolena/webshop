@@ -12,6 +12,14 @@ p {
     font-weight: regular;
 }
 
+.cardList {
+    display: flex;
+    flex-direction: row;
+    margin-left: 110px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 .example-card {
     max-width: 300px;
     margin: 50px;
@@ -26,6 +34,7 @@ p {
   .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
+    
   }
 
 .footer-card {

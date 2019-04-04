@@ -55,9 +55,10 @@
         </mat-card-footer>
     </mat-card>-->
 
-    <mat-list>
-        <mat-list-item *ngFor="let folder of folders">
-            <mat-card class="example-card">
+  <div class="cardList">
+    <mat-list-item *ngFor="let card of cards">
+        <mat-list>
+           <mat-card class="example-card">
                 <img mat-card-image src="{{card.imgUrl}}" alt="Photo of a Shiba Inu" style="width: 300px;">
                 <mat-card-content>
                   <p style="font-weight: bold;">
@@ -77,8 +78,9 @@
                       </mat-card-actions>
                 </mat-card-footer>
             </mat-card>
-          </mat-list-item>
-    </mat-list>
+          </mat-list>
+    </mat-list-item>
+  </div>
 
 
 
