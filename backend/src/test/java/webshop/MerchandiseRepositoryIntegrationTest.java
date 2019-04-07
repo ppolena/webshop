@@ -81,33 +81,43 @@ public class MerchandiseRepositoryIntegrationTest {
 
         //when
         Page<Merchandise> merchandisePage = merchandiseRepository.findAll(PageRequest.of(0, 10, Sort.by("name").ascending()));
+
+        //then
         assertThat(merchandisePage.getTotalElements()).isEqualTo(3);
         assertThat(merchandisePage.getContent()).extracting(Merchandise::getName).containsExactly("Galaxy S1", "Galaxy S2", "Galaxy S3");
     }
 	
 	public void findByType() {
-		//given
-		Merchandise merchandise = new Merchandise()
-                .setName("Galaxy X")
+        //given
+        Merchandise merchandise1 = new Merchandise()
+                .setName("Galaxy S1")
                 .setType(ELECTRONICS)
                 .setManufacturer("Samsung")
-                .setPrice(999.99);
+                .setPrice(199.99);
 
-        Merchandise persistedMerchandise = entityManager.persist(merchandise);
+        Merchandise merchandise2 = new Merchandise()
+                .setName("Galaxy S2")
+                .setType(ELECTRONICS)
+                .setManufacturer("Samsung")
+                .setPrice(299.99);
+
+        Merchandise merchandise3 = new Merchandise()
+                .setName("Galaxy S3")
+                .setType(ELECTRONICS)
+                .setManufacturer("Samsung")
+                .setPrice(399.99);
+
+        entityManager.persist(merchandise1);
+        entityManager.persist(merchandise2);
+        entityManager.persist(merchandise3);
         entityManager.flush();
 
         //when
-		Page<Merchandise> merchandisePage = merchandiseRepository.findByType("ELECTRONICS");
+        Page<Merchandise> merchandisePage = merchandiseRepository.findByType(ELECTRONICS, PageRequest.of(0, 10, Sort.by("name").ascending()));
 
         //then
-		assertThat(merchandisePage.isPresent()).isTrue();
-        assertThat(merchandisePage.get().getName()).isEqualTo("Galaxy X");
-        assertThat(merchandisePage.get().getType()).isEqualTo(ELECTRONICS);
-        assertThat(merchandisePage.get().getManufacturer()).isEqualTo("Samsung");
-        assertThat(merchandisePage.get().getPrice()).isEqualTo(999.99);
-        assertThat(merchandisePage.get().getImage()).isNull();
-        assertThat(merchandisePage.get().getThumbnail()).isNull();
-        assertThat(merchandisePage.get().getDescription()).isNull();
+        assertThat(merchandisePage.getTotalElements()).isEqualTo(3);
+        assertThat(merchandisePage.getContent()).extracting(Merchandise::getName).containsExactly("Galaxy S1", "Galaxy S2", "Galaxy S3");
 	}
 	
 	public void findBySearchText() {
@@ -136,10 +146,10 @@ public class MerchandiseRepositoryIntegrationTest {
         entityManager.flush();
 
         //when
-		Page<Merchandise> merchandisePage = merchandiseRepository.findBySearchText("sung", PageRequest.of(0, 10));
+        Page<Merchandise> merchandisePage = merchandiseRepository.findBySearchText("sung", PageRequest.of(0, 10, Sort.by("name").ascending()));
 		
         //then		
-		assertThat(merchandisePage.getTotalElements()).isEqualTo(1);
-        assertThat(merchandisePage.getContent()).extracting(Merchandise::getManufacturer).containsExactly("Samsung");
+        assertThat(merchandisePage.getTotalElements()).isEqualTo(3);
+        assertThat(merchandisePage.getContent()).extracting(Merchandise::getName).containsExactly("Galaxy S1", "Galaxy S2", "Galaxy S3");
 	}
 }
