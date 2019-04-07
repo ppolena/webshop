@@ -28,7 +28,7 @@ public interface UserRepository extends JpaRepository<User, UUID> {
     Page<User> findAll(Pageable pageable);
 
     @RestResource(path = "by-first-and-last-name", rel = "by-first-and-last-name")
-    Optional<User> findByFirstNameAndLastName(@Param("first-name") String firstName, @Param("last-name") String lastName);
+    Optional<User> findByFirstNameAndLastName(@Param("firstname") String firstName, @Param("lastname") String lastName);
 
     @RestResource(path = "by-email", rel = "by-email")
     Optional<User> findByEmail(@Param("email") String email);
