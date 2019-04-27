@@ -45,12 +45,12 @@ public class Merchandise extends BaseEntity {
     @Column(name = "price", nullable = false)
     private double price;
 
-    @Column(name = "thumbnail", nullable = false, columnDefinition = "text")
+    @Column(name = "thumbnail", columnDefinition = "text")
     private String thumbnail;
 
-    @Column(name = "image", nullable = false, columnDefinition = "text")
+    @Column(name = "image", columnDefinition = "text")
     private String image;
 
-    @Column(name = "description", nullable = false, columnDefinition = "text")
+    @Column(name = "description", columnDefinition = "text")
     private String description;
 }
