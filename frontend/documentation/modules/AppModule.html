@@ -8,118 +8,252 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	    <link rel="stylesheet" href="../styles/style.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
             <a href="../" class="navbar-brand">frontend documentation</a>
-            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../">frontend documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./modules.html" >
+                            <span class="fa fa-archive"></span>
+                            <span>Modules</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            ></span>
+                        </a>
+                        <ul class="links collapse in"
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/AppModule.html"  class="active" >AppModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-components-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/AppComponent.html" >AppComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/MainPageComponent.html" >MainPageComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-interfaces-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/Section.html" >Section</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
         </div>
 
         <div class="container-fluid main">
            <div class="row main">
                <div class="hidden-xs menu">
-                   <compodoc-menu mode="normal"></compodoc-menu>
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../">frontend documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./modules.html" >
+                                   <span class="fa fa-archive"></span>
+                                   <span>Modules</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   ></span>
+                               </a>
+                               <ul class="links collapse in"
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/AppModule.html"  class="active" >AppModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#components-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/MainPageComponent.html" >MainPageComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#interfaces-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/Section.html" >Section</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
                </div>
-               <!-- START CONTENT -->
                <div class="content module">
                    <div class="content-data">
 
-
-
 <ol class="breadcrumb">
-    <li>Modules</li>
-    <li>AppModule</li>
+  <li>Modules</li>
+  <li>AppModule</li>
 </ol>
 
-<div class="text-center module-graph-container">
-    <div id="module-graph-svg">
-        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
- "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generated by graphviz version 2.40.1 (20161225.0304)
- -->
-<!-- Title: dependencies Pages: 1 -->
-<svg width="504pt" height="284pt"
- viewBox="0.00 0.00 504.00 284.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 280)">
-<title>dependencies</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-280 500,-280 500,4 -4,4"/>
-<text text-anchor="start" x="227.0091" y="-42.4" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#000000">Legend</text>
-<polygon fill="#ffffb3" stroke="transparent" points="14,-10 14,-30 34,-30 34,-10 14,-10"/>
-<text text-anchor="start" x="37.629" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Declarations</text>
-<polygon fill="#8dd3c7" stroke="transparent" points="127,-10 127,-30 147,-30 147,-10 127,-10"/>
-<text text-anchor="start" x="150.7251" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Module</text>
-<polygon fill="#80b1d3" stroke="transparent" points="213,-10 213,-30 233,-30 233,-10 213,-10"/>
-<text text-anchor="start" x="236.7812" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Bootstrap</text>
-<polygon fill="#fdb462" stroke="transparent" points="310,-10 310,-30 330,-30 330,-10 310,-10"/>
-<text text-anchor="start" x="333.6732" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Providers</text>
-<polygon fill="#fb8072" stroke="transparent" points="406,-10 406,-30 426,-30 426,-10 406,-10"/>
-<text text-anchor="start" x="429.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
-<g id="clust1" class="cluster">
-<title>cluster_AppModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="101,-70 101,-268 395,-268 395,-70 101,-70"/>
-</g>
-<g id="clust2" class="cluster">
-<title>cluster_AppModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="109,-78 109,-130 387,-130 387,-78 109,-78"/>
-</g>
-<g id="clust7" class="cluster">
-<title>cluster_AppModule_bootstrap</title>
-<polygon fill="none" stroke="#000000" points="193,-208 193,-260 317,-260 317,-208 193,-208"/>
-</g>
-<!-- AppComponent -->
-<g id="node1" class="node">
-<title>AppComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="378.9399,-122 273.0601,-122 273.0601,-86 378.9399,-86 378.9399,-122"/>
-<text text-anchor="middle" x="326" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppComponent</text>
-</g>
-<!-- AppModule -->
-<g id="node3" class="node">
-<title>AppModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="296.6571,-187 293.6571,-191 272.6571,-191 269.6571,-187 213.3429,-187 213.3429,-151 296.6571,-151 296.6571,-187"/>
-<text text-anchor="middle" x="255" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppModule</text>
-</g>
-<!-- AppComponent&#45;&gt;AppModule -->
-<g id="edge1" class="edge">
-<title>AppComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M285.0544,-122.1061C285.0544,-122.1061 285.0544,-140.991 285.0544,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="281.5544,-140.9909 285.0544,-150.991 288.5544,-140.991 281.5544,-140.9909"/>
-</g>
-<!-- MainPageComponent -->
-<g id="node2" class="node">
-<title>MainPageComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="255.094,-122 116.906,-122 116.906,-86 255.094,-86 255.094,-122"/>
-<text text-anchor="middle" x="186" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">MainPageComponent</text>
-</g>
-<!-- MainPageComponent&#45;&gt;AppModule -->
-<g id="edge2" class="edge">
-<title>MainPageComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M234.1094,-122.1061C234.1094,-122.1061 234.1094,-140.991 234.1094,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="230.6095,-140.9909 234.1094,-150.991 237.6095,-140.991 230.6095,-140.9909"/>
-</g>
-<!-- AppComponent  -->
-<g id="node4" class="node">
-<title>AppComponent </title>
-<polygon fill="#80b1d3" stroke="#000000" points="309.439,-252 200.561,-252 200.561,-216 309.439,-216 309.439,-252"/>
-<text text-anchor="middle" x="255" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppComponent </text>
-</g>
-<!-- AppModule&#45;&gt;AppComponent  -->
-<g id="edge3" class="edge">
-<title>AppModule&#45;&gt;AppComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M255,-187.1061C255,-187.1061 255,-205.991 255,-205.991"/>
-<polygon fill="#000000" stroke="#000000" points="251.5001,-205.9909 255,-215.991 258.5001,-205.991 251.5001,-205.9909"/>
-</g>
-</g>
-</svg>
-
-    </div>
-    <i id="fullscreen" class="icon ion-ios-resize module-graph-fullscreen-btn" aria-hidden="true"></i>
+<div class="text-center">
+    <object id="demo-svg" type="image/svg+xml" data="../modules/AppModule/dependencies.svg" style="width: 100%; height: 250px;">
+            Your browser does not support SVG
+    </object>
     <div class="btn-group">
         <button id="zoom-in" class="btn btn-default btn-sm">Zoom in</button>
         <button id="reset" class="btn btn-default btn-sm">Reset</button>
@@ -130,17 +264,16 @@
 <script src="../js/svg-pan-zoom.controls.js"></script>
 
 <ul class="nav nav-tabs" role="tablist">
-    <li  class="active" >
-        <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+    <li class="active">
+        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
     </li>
-    <li >
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
     </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info">
-
+    <div class="tab-pane fade active in" id="infos">
         <p class="comment">
             <h3>File</h3>
         </p>
@@ -149,52 +282,32 @@
         </p>
 
 
-
-
         <div class="container-fluid module">
             <div class="row">
                 <div class="col-sm-3">
-                    <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank"
-                            title="Official documentation about module declarations"><span class="icon ion-ios-information-circle-outline"></span></a></h3>
+                    <h3>Declarations<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#declarations-anchor" target="_blank"><span class="fa fa-info-circle"></span></a></h3>
                     <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="../components/AppComponent.html">AppComponent</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="../components/MainPageComponent.html">MainPageComponent</a>
-                        </li>
+                            <li class="list-group-item">
+                                <a href="../components/AppComponent.html">AppComponent</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../components/MainPageComponent.html">MainPageComponent</a>
+                            </li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h3>Bootstrap<a href="https://angular.io/api/core/NgModule#bootstrap" target="_blank"
-                            title="Official documentation about module bootstrap"><span class="icon ion-ios-information-circle-outline"></a></h3>
+                    <h3>Bootstrap<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#bootstrap-anchor" target="_blank"><span class="fa fa-info-circle"></a></h3>
                     <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="../components/AppComponent.html">AppComponent</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h3>Schemas<a href="https://angular.io/api/core/NgModule#schemas" target="_blank" title="Official documentation about module schemas"><span
-                                class="icon ion-ios-information-circle-outline"></a></h3>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="https://angular.io/api/core/CUSTOM_ELEMENTS_SCHEMA" target="_blank">CUSTOM_ELEMENTS_SCHEMA</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="https://angular.io/api/core/NO_ERRORS_SCHEMA" target="_blank">NO_ERRORS_SCHEMA</a>
-                        </li>
+                            <li class="list-group-item">
+                                <a href="../components/AppComponent.html" >AppComponent</a>
+                            </li>
                     </ul>
                 </div>
             </div>
         </div>
-
-
     </div>
-
-
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre><code class="hljs javascript">import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
 import { NgModule, NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from &#x27;@angular/core&#x27;;
 
 import { AppComponent } from &#x27;./app.component&#x27;;
@@ -231,13 +344,9 @@ export class AppModule { }
 
 
 
-
-
-
-
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -245,21 +354,8 @@ export class AppModule { }
     </div>
 </div>
 </div>
-               <!-- END CONTENT -->
            </div>
        </div>
-
-       <script>
-            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppModule.html';
-       </script>
-
-       <script src="../js/libs/custom-elements.min.js"></script>
-       <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
-       <script src="../js/menu-wc.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
@@ -270,17 +366,20 @@ export class AppModule { }
 
        <script src="../js/compodoc.js"></script>
 
-       <script src="../js/tabs.js"></script>
-       <script src="../js/menu.js"></script>
-       <script src="../js/libs/clipboard.min.js"></script>
-       <script src="../js/libs/prism.js"></script>
-       <script src="../js/sourceCode.js"></script>
-          <script src="../js/search/search.js"></script>
-          <script src="../js/search/lunr.min.js"></script>
-          <script src="../js/search/search-lunr.js"></script>
-          <script src="../js/search/search_index.js"></script>
-       <script src="../js/lazy-load-graphs.js"></script>
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
 
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/highlight.pack.js"></script>
+       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/search/search_index.js"></script>
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                hljs.initHighlightingOnLoad();
+                hljs.initLineNumbersOnLoad();
+            });
+       </script>
 
     </body>
 </html>
