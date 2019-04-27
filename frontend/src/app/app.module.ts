@@ -5,6 +5,7 @@ import { RoutingModule } from './routing/routing.module';
 
 
 import { AppComponent } from './app.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
@@ -18,18 +19,10 @@ import { AgmCoreModule } from '@agm/core';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
-import { IssueListComponent } from './issue-list/issue-list.component';
-import { IssueFormComponent } from './issue-form/issue-form.component';
-import { IssueDetailComponent } from './issue-detail/issue-detail.component';
-import { MainPageComponent } from './main-page/main-page.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    IssueListComponent,
-    IssueFormComponent,
-    IssueDetailComponent,
     MainPageComponent
   ],
   imports: [
