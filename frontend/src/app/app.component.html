@@ -1,84 +1,84 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <mat-toolbar>
-    <button mat-button routerLink="/issues">Kezdőlap</button>
-    <button mat-button routerLink="/issues">Termékek</button>
-    <button mat-button routerLink="/issues/add">Kapcsolat</button>
-    <div class="icon-login-and-cart">
-      <button mat-button routerLink=""><mat-icon>shopping_cart</mat-icon></button>
-      <button mat-button routerLink=""><mat-icon>account_circle</mat-icon></button>
-    </div>
-    </mat-toolbar>
-  
-    <router-outlet></router-outlet>
-  
-  
-  <!-- Footer -->
-  <footer class="page-footer font-small blue pt-4">
-  
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
-  
-      <!-- Grid row -->
-      <div class="row">
-  
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-  
-          <!-- Content -->
-          <h5 class="text-uppercase">ELÉRHETŐSÉG</h5>
-  
-          <!-- this creates a google map on the page with the given lat/lng from -->
-          <!-- the component as the initial center of the map: -->
-          <agm-map [latitude]="lat" [longitude]="lng">
-          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-          </agm-map>
-  
+  <button mat-button routerLink="/issues">Kezdőlap</button>
+  <button mat-button routerLink="/issues">Termékek</button>
+  <button mat-button routerLink="/issues/add">Kapcsolat</button>
+  <div class="icon-login-and-cart">
+    <button mat-button routerLink=""><mat-icon>shopping_cart</mat-icon></button>
+    <button mat-button routerLink=""><mat-icon>account_circle</mat-icon></button>
+  </div>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">ELÉRHETŐSÉG</h5>
+
+        <!-- this creates a google map on the page with the given lat/lng from -->
+        <!-- the component as the initial center of the map: -->
+        <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          
+
+          <mat-list class="list-unstyled">
+            <mat-list-item>
+              <mat-icon>place</mat-icon> 1125 Budapest Alkotás út 3.
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon>mobile_screen_share</mat-icon> (+36 30) 211 5678
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon>email</mat-icon> marketing@webshop.hu
+            </mat-list-item>
+            <mat-list-item>
+                <div class="example-button-row">
+                    <a mat-raised-button routerLink=".">ÚTVONAL TERVEZÉS</a>
+                </div>
+            </mat-list-item>
+          </mat-list>
+
         </div>
         <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none pb-3">
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-  
-            <!-- Links -->
-            
-  
-            <mat-list class="list-unstyled">
-              <mat-list-item>
-                <mat-icon>place</mat-icon> 1125 Budapest Alkotás út 3.
-              </mat-list-item>
-              <mat-list-item>
-                <mat-icon>mobile_screen_share</mat-icon> (+36 30) 211 5678
-              </mat-list-item>
-              <mat-list-item>
-                <mat-icon>email</mat-icon> marketing@webshop.hu
-              </mat-list-item>
-              <mat-list-item>
-                  <div class="example-button-row">
-                      <a mat-raised-button routerLink=".">ÚTVONAL TERVEZÉS</a>
-                  </div>
-              </mat-list-item>
-            </mat-list>
-  
-          </div>
-          <!-- Grid column -->
-  
-          
-  
-  
-      </div>
-      <!-- Grid row -->
-  
+
+        
+
+
     </div>
-    <!-- Footer Links -->
-  
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a routerLink="https://mdbootstrap.com/education/angular/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
-  <!-- Footer -->
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a routerLink="https://mdbootstrap.com/education/angular/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
