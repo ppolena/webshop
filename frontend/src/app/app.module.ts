@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RoutingModule } from './routing/routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -14,20 +14,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import { AgmCoreModule } from '@agm/core';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+import {CarouselModule} from "ngx-bootstrap/carousel";
 
 
-import { IssueListComponent } from './issue-list/issue-list.component';
-import { IssueFormComponent } from './issue-form/issue-form.component';
-import { IssueDetailComponent } from './issue-detail/issue-detail.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    IssueListComponent,
-    IssueFormComponent,
-    IssueDetailComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +38,7 @@ import { IssueDetailComponent } from './issue-detail/issue-detail.component';
     CarouselModule.forRoot(),
     MatCardModule,
     MatListModule,
-    RoutingModule
+    RouterModule
   ],
   exports: [
     MatButtonModule,
