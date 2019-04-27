@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RoutingModule } from './routing/routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -37,7 +37,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     CarouselModule.forRoot(),
     MatCardModule,
     MatListModule,
-    RoutingModule
+    RouterModule
   ],
   exports: [
     MatButtonModule,
