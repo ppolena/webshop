@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatListModule} from '@angular/material/list';
-import {MatCardModule} from '@angular/material/card';
+import {MatCardModule} from '@angular/material';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,10 @@ import {MatCardModule} from '@angular/material/card';
     BrowserModule,
     BrowserAnimationsModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
   ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA,
-    NO_ERRORS_SCHEMA
-  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
