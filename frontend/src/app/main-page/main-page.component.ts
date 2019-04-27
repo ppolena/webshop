@@ -19,7 +19,7 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit() {
   }
-
+/*
   cards: Section[] = [
     {
       imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
@@ -75,7 +75,7 @@ export class MainPageComponent implements OnInit {
       details: 'Bla Bla Bla Bla',
       price: '2 500Ft'
     }
-  ];
+  ];*/
 
   
 

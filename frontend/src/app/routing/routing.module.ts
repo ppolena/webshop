@@ -10,11 +10,12 @@ const routes: Routes = [
     redirectTo: '/issues',
     pathMatch: 'full'
   },
+  /*
   {
     path: 'issues',
     component: MainPageComponent
 
-  },
+  },*/
   /*{
     path: 'issues/new',
     component: IssueFormComponent
