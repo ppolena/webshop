@@ -46,7 +46,7 @@ import { MainPageComponent } from './main-page/main-page.component';
     CarouselModule.forRoot(),
     MatCardModule,
     MatListModule,
-    RoutingModule,
+    RoutingModule
   ],
   exports: [
     MatButtonModule,
