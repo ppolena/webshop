@@ -1,47 +1,45 @@
 mat-icon {
-    position: right;
+  position: right;
 }
 
 .icon-login-and-cart {
-    margin-left: 1000px;
+  margin-left: 1000px;
 }
 
 .mat-toolbar {
-    color: white;
-    background: #374653;
-    margin-bottom: 50px;
+  color: white;
+  background: #374653;
+  margin-bottom: 50px;
 }
 
-
-
 .list-unstyled {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 mat-list {
-    margin-top: 50px;
-    font-size: 20px;
+  margin-top: 50px;
+  font-size: 20px;
 }
 
 .mat-list-base .mat-list-item {
-    color: white;
+  color: white;
 }
 
 .mat-raised-button {
-    font-size: 18px;
-    background: #F19345;
-    color: white;
+  font-size: 18px;
+  background: #f19345;
+  color: white;
 }
 
 footer {
-    right: 0;
-    bottom: 0;
-    left: 0;
-    color: white;
-    background: #374653;
-    overflow: hidden;
-    display: block;
-} 
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background: #374653;
+  overflow: hidden;
+  display: block;
+}
 agm-map {
-    height: 300px;
-  }
+  height: 300px;
+}

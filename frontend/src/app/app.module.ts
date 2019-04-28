@@ -1,42 +1,39 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { RouterTestingModule } from "@angular/router/testing";
 
+import { AppComponent } from "./app.component";
 
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule
+} from "@angular/platform-browser/animations";
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatListModule
+} from "@angular/material";
 
-import { AppComponent } from './app.component';
+import { AgmCoreModule } from "@agm/core";
 
-
-import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, 
-        MatCheckboxModule, 
-        MatToolbarModule, 
-        MatIconModule, 
-        MatCardModule, 
-        MatListModule} from '@angular/material';
-
-
-import { AgmCoreModule } from '@agm/core';
-
-import { CarouselModule } from 'ngx-bootstrap/carousel';
-
-
+import { CarouselModule } from "ngx-bootstrap/carousel";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    MatButtonModule, 
+    MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
     MatIconModule,
     AgmCoreModule.forRoot({
-      apiKey: 'YOUR_KEY'
+      apiKey: "YOUR_KEY"
     }),
     CarouselModule.forRoot(),
     MatCardModule,
@@ -48,7 +45,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     BrowserModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    MatButtonModule, 
+    MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
     MatIconModule,
@@ -60,4 +57,4 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
