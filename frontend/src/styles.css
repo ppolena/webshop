@@ -3,8 +3,14 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css";
 
+<<<<<<< HEAD
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
+=======
+body {
+    background: #E7E5DE;
+}
+>>>>>>> 149229c560f55892ff777c233fd231e7f8d320a5
