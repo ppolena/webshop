@@ -5,9 +5,7 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatListModule} from '@angular/material/list';
-import {MatCardModule} from '@angular/material';
-import {MatIconModule} from '@angular/material/icon';
+import {MatListModule, MatCardModule, MatIconModule} from '@angular/material';
 
 @NgModule({
   declarations: [
