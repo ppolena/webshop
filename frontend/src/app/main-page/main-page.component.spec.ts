@@ -1,16 +1,26 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { MainPageComponent } from './main-page.component';
+import { MainPageComponent } from "./main-page.component";
 
-describe('MainPageComponent', () => {
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatListModule, MatCardModule, MatIconModule } from "@angular/material";
+
+describe("MainPageComponent", () => {
   let component: MainPageComponent;
   let fixture: ComponentFixture<MainPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainPageComponent ]
-    })
-    .compileComponents();
+      declarations: [MainPageComponent],
+      imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatListModule,
+        MatCardModule,
+        MatIconModule
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +29,7 @@ describe('MainPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
