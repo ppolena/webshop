@@ -18,46 +18,30 @@
     "@angular/common": "^6.1.0",
     "@angular/compiler": "^6.1.0",
     "@angular/core": "^6.1.10",
-<<<<<<< HEAD
     "@angular/flex-layout": "^7.0.0-beta.24",
-=======
->>>>>>> 149229c560f55892ff777c233fd231e7f8d320a5
     "@angular/forms": "^6.1.0",
     "@angular/http": "^6.1.0",
     "@angular/material": "^6.4.7",
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
-<<<<<<< HEAD
     "@ng-bootstrap/ng-bootstrap": "^4.1.0",
     "angular-image-slider": "0.0.8",
     "angular-pipes": "^9.0.2",
     "angular2-carousel": "^1.0.17",
     "bootstrap": "^4.3.1",
-=======
-    "angular2-carousel": "^1.0.17",
->>>>>>> 149229c560f55892ff777c233fd231e7f8d320a5
     "carousel": "0.0.3",
     "compodoc": "0.0.41",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
-<<<<<<< HEAD
-    "ngx-bootstrap": "^4.0.0",
-=======
     "ngx-bootstrap": "^4.1.1",
->>>>>>> 149229c560f55892ff777c233fd231e7f8d320a5
     "rxjs": "~6.2.0",
     "rxjs-compat": "^6.0.0-tactical-rc.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@angular-devkit/build-angular": "^0.13.8",
     "@angular/cli": "^6.2.9",
-=======
-    "@angular-devkit/build-angular": "^0.8.9",
-    "@angular/cli": "~6.2.3",
->>>>>>> 149229c560f55892ff777c233fd231e7f8d320a5
     "@angular/compiler-cli": "^6.1.0",
     "@angular/language-service": "^6.1.0",
     "@compodoc/compodoc": "^1.1.9",
