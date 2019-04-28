@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { MainTemplateComponent } from '../main-template/main-template.component';
 
-import { MainPageComponent } from '../main-page/main-page.component';
+
 
 const routes: Routes = [
   {
@@ -10,12 +11,12 @@ const routes: Routes = [
     redirectTo: '/issues',
     pathMatch: 'full'
   },
-  /*
+  
   {
-    path: 'issues',
-    component: MainPageComponent
+    path: 'issues/address',
+    component: MainTemplateComponent
 
-  },*/
+  },
   /*{
     path: 'issues/new',
     component: IssueFormComponent

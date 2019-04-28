@@ -5,7 +5,7 @@ import { RoutingModule } from './routing/routing.module';
 
 
 import { AppComponent } from './app.component';
-import { MainPageComponent } from './main-page/main-page.component';
+import { MainTemplateComponent } from './main-template/main-template.component';
 
 
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
@@ -20,10 +20,11 @@ import { AgmCoreModule } from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent
+    MainTemplateComponent
   ],
   imports: [
     BrowserModule,
