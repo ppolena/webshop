@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "compodoc": "npx compodoc -p src/tsconfig.app.json"
+    "compodoc": "npx compodoc -p src/tsconfig.app.json",
+    "format": "prettier --write \"**/*.{ts,css}\""
   },
   "private": true,
   "dependencies": {
@@ -34,7 +35,7 @@
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.8.9",
+    "@angular-devkit/build-angular": "^0.13.8",
     "@angular/cli": "~6.2.3",
     "@angular/compiler-cli": "^6.1.0",
     "@angular/language-service": "^6.1.0",
@@ -50,6 +51,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "prettier": "1.17.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
