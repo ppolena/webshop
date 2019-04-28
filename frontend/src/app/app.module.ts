@@ -1,26 +1,26 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { RouterTestingModule } from "@angular/router/testing";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 
-import { AppComponent } from "./app.component";
+import { AppComponent } from './app.component';
 
 import {
   BrowserAnimationsModule,
-  NoopAnimationsModule
-} from "@angular/platform-browser/animations";
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
   MatCheckboxModule,
   MatToolbarModule,
   MatIconModule,
   MatCardModule,
-  MatListModule
-} from "@angular/material";
+  MatListModule,
+} from '@angular/material';
 
-import { AgmCoreModule } from "@agm/core";
+import { AgmCoreModule } from '@agm/core';
 
-import { CarouselModule } from "ngx-bootstrap/carousel";
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,13 +33,13 @@ import { CarouselModule } from "ngx-bootstrap/carousel";
     MatToolbarModule,
     MatIconModule,
     AgmCoreModule.forRoot({
-      apiKey: "YOUR_KEY"
+      apiKey: 'YOUR_KEY',
     }),
     CarouselModule.forRoot(),
     MatCardModule,
     MatListModule,
     RouterModule,
-    RouterTestingModule
+    RouterTestingModule,
   ],
   exports: [
     BrowserModule,
@@ -52,9 +52,9 @@ import { CarouselModule } from "ngx-bootstrap/carousel";
     MatCardModule,
     MatListModule,
     RouterModule,
-    RouterTestingModule
+    RouterTestingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
