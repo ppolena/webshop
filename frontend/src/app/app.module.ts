@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { RoutingModule } from './routing/routing.module';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
@@ -21,9 +22,10 @@ import {
 import { AgmCoreModule } from '@agm/core';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FavouriteCardsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -40,6 +42,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     MatListModule,
     RouterModule,
     RouterTestingModule,
+    RoutingModule
   ],
   exports: [
     BrowserModule,
