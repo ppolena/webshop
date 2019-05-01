@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { FavouriteCardsComponent } from '../favourite-cards/favourite-cards.component';
-import { MainCarouselComponent } from '../main-carousel/main-carousel.component';
+
+import { MainPageComponent } from '../main-page/main-page.component';
 
 const routes: Routes = [
   {
@@ -12,11 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'issues',
-    component: FavouriteCardsComponent,
-  },
-  {
-    path: 'issues/carousel',
-    component: MainCarouselComponent,
+    component: MainPageComponent,
   },
 ];
 

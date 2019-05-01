@@ -24,9 +24,10 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
-  declarations: [AppComponent, FavouriteCardsComponent, MainCarouselComponent],
+  declarations: [AppComponent, FavouriteCardsComponent, MainCarouselComponent, MainPageComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
