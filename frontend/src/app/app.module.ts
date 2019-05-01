@@ -20,12 +20,13 @@ import {
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
-
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
+import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 
 @NgModule({
-  declarations: [AppComponent, FavouriteCardsComponent],
+  declarations: [AppComponent, FavouriteCardsComponent, MainCarouselComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
