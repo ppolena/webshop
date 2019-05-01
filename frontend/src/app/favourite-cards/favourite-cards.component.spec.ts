@@ -5,7 +5,6 @@ import { FavouriteCardsComponent } from './favourite-cards.component';
 
 import { MatCardModule, 
          MatIconModule,
-         MatLineModule, 
          MatListModule} from '@angular/material';
 
 describe('FavouriteCardsComponent', () => {

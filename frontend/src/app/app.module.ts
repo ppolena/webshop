@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { RoutingModule } from './routing/routing.module';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
@@ -41,6 +42,7 @@ import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.compo
     MatListModule,
     RouterModule,
     RouterTestingModule,
+    RoutingModule
   ],
   exports: [
     BrowserModule,

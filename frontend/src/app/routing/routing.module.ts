@@ -10,7 +10,7 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'issues/main',
+    path: 'issues',
     component: FavouriteCardsComponent,
   },
 ];
