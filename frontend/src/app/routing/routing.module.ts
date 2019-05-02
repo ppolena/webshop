@@ -16,7 +16,7 @@ const routes: Routes = [
     component: MainPageComponent,
   },
   {
-    path: 'contact',
+    path: 'issues/contact',
     component: ContactFormComponent
   },
 ];
