@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MainPageComponent } from '../main-page/main-page.component';
+import { ContactFormComponent } from "../contact-form/contact-form.component";
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'issues',
     component: MainPageComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactFormComponent
   },
 ];
 
