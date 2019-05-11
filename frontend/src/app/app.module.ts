@@ -17,18 +17,33 @@ import {
   MatIconModule,
   MatCardModule,
   MatListModule,
+  MatFormFieldModule,
+  MatTableModule,
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SearchBoxComponent } from './search-box/search-box.component';
+import { ElectronicsComponent } from './electronics/electronics.component';
 
 @NgModule({
-  declarations: [AppComponent, FavouriteCardsComponent, MainCarouselComponent, MainPageComponent, ContactFormComponent],
+  declarations: [
+    AppComponent,
+    FavouriteCardsComponent,
+    MainCarouselComponent,
+    MainPageComponent,
+    ContactFormComponent,
+    SearchBarComponent,
+    SearchBoxComponent,
+    ElectronicsComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -45,7 +60,11 @@ import { MainPageComponent } from './main-page/main-page.component';
     MatListModule,
     RouterModule,
     RouterTestingModule,
-    RoutingModule
+    RoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatTableModule,
   ],
   exports: [
     BrowserModule,
@@ -59,6 +78,10 @@ import { MainPageComponent } from './main-page/main-page.component';
     MatListModule,
     RouterModule,
     RouterTestingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

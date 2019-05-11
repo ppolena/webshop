@@ -31,7 +31,9 @@
     "compodoc": "0.0.41",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
+    "ng-pipe-filter": "^1.0.4",
     "ngx-bootstrap": "^4.1.1",
+    "pipe": "^1.1.0",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },
