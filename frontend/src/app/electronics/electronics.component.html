@@ -1,11 +1,16 @@
-<!---<div id="menu">
-    <label>Search: <input ng-model="searchText"></label>
+<div id="menu">
+  <div class="search-box">
+    <form class="form-inline md-form mr-auto mb-4">
+      <input
+        class="form-control mr-sm-2"
+        type="text"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button mdbBtn type="button" color="success" mdbWavesEffect>
+        Success
+      </button>
+    </form>
+  </div>
   <app-favourite-cards></app-favourite-cards>
-</div>-->
-
-<div class="md-form">
-  <input type="search" [(ngModel)]="searchText" placeholder="Search text" />
 </div>
-<ul *ngFor="let data of dataset | filter: searchText">
-  <li>{{ data }}</li>
-</ul>

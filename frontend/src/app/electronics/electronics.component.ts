@@ -7,8 +7,6 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./electronics.component.css'],
 })
 export class ElectronicsComponent implements OnInit {
-  dataset = ['MDB', 'Angular', 'Bootstrap', 'Framework', 'SPA', 'React', 'Vue'];
-
   constructor() {}
 
   ngOnInit() {}
