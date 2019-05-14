@@ -1,6 +1,6 @@
 <div id="menu">
   <div class="search-box">
-    <form class="form-inline md-form mr-auto mb-4">
+    <!--<form class="form-inline md-form mr-auto mb-4">
       <input
         class="form-control mr-sm-2"
         type="text"
@@ -10,7 +10,16 @@
       <button mdbBtn type="button" color="success" mdbWavesEffect>
         Success
       </button>
-    </form>
+    </form>-->
+
+    <mat-form-field>
+      <input
+        matInput
+        (keyup)="applyFilter($event.target.value)"
+        placeholder="Filter"
+        style="padding-left: 15px;"
+      />
+    </mat-form-field>
   </div>
   <app-favourite-cards></app-favourite-cards>
 </div>
