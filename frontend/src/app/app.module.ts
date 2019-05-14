@@ -26,9 +26,19 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
-  declarations: [AppComponent, FavouriteCardsComponent, MainCarouselComponent, MainPageComponent, ContactFormComponent],
+  declarations: [
+    AppComponent,
+    FavouriteCardsComponent,
+    MainCarouselComponent,
+    MainPageComponent,
+    ContactFormComponent,
+    LoginComponent,
+    RegistrationComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -45,7 +55,7 @@ import { MainPageComponent } from './main-page/main-page.component';
     MatListModule,
     RouterModule,
     RouterTestingModule,
-    RoutingModule
+    RoutingModule,
   ],
   exports: [
     BrowserModule,
