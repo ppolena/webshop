@@ -1,3 +1,145 @@
-<p>
-  registration works!
-</p>
+<div class="container">
+  <div class="text-center">
+    <h3 class="h3 mb-4">Regisztráció</h3>
+    <h5 class="h5 mb-4">Saját fiókkal több lehetőség áll rendelkezésre!</h5>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div *ngIf="error" class="notification is-danger">
+      Sikertelen regisztráció. Próbáld újra.
+    </div>
+
+    <form [formGroup]="regForm" novalidate>
+      <input
+        type="text"
+        class="form-control mb-4"
+        placeholder="Felhasználónév"
+        id="username"
+        formControlName="username"
+        [class.is-danger]="username.hasError('required') && username.touched"
+      />
+
+      <p
+        *ngIf="username.hasError('required') && username.touched"
+        class="help is-danger"
+      >
+        Felhasználónév megadása kötelező
+      </p>
+
+      <input
+        type="password"
+        class="form-control mb-4"
+        placeholder="Jelszó"
+        id="password"
+        formControlName="password"
+        [class.is-danger]="password.hasError('required') && password.touched"
+      />
+
+      <p
+        *ngIf="password.hasError('required') && password.touched"
+        class="help is-danger"
+      >
+        Jelszó megadása kötelező
+      </p>
+
+      <input
+        type="email"
+        class="form-control mb-4"
+        placeholder="E-mail cím"
+        id="email"
+        formControlName="email"
+        [class.is-danger]="
+          (email.hasError('required') || email.hasError('email')) &&
+          email.touched
+        "
+      />
+
+      <p
+        *ngIf="email.hasError('required') && email.touched"
+        class="help is-danger"
+      >
+        E-mail cím megadása kötelező
+      </p>
+      <p
+        *ngIf="email.hasError('email') && email.touched"
+        class="help is-danger"
+      >
+        Kérlek adj meg egy valós e-mail címet
+      </p>
+
+      <input
+        type="text"
+        class="form-control mb-4"
+        placeholder="Telefon"
+        id="username"
+        formControlName="phone"
+        [class.is-danger]="phone.hasError('required') && phone.touched"
+      />
+
+      <p
+        *ngIf="phone.hasError('required') && phone.touched"
+        class="help is-danger"
+      >
+        Telefonszám megadása kötelező!
+      </p>
+
+      <input
+        type="text"
+        class="form-control mb-4"
+        placeholder="Irányítószám"
+        id="postalCode"
+        formControlName="postalCode"
+        [class.is-danger]="
+          postalCode.hasError('required') && postalCode.touched
+        "
+      />
+
+      <p
+        *ngIf="postalCode.hasError('required') && postalCode.touched"
+        class="help is-danger"
+      >
+        Irányítószám megadása kötelező!
+      </p>
+
+      <input
+        type="text"
+        class="form-control mb-4"
+        placeholder="Város"
+        id="city"
+        formControlName="city"
+        [class.is-danger]="city.hasError('required') && city.touched"
+      />
+
+      <p
+        *ngIf="city.hasError('required') && city.touched"
+        class="help is-danger"
+      >
+        Kötelező!
+      </p>
+
+      <input
+        type="text"
+        class="form-control mb-4"
+        placeholder="Cím"
+        id="address"
+        formControlName="address"
+        [class.is-danger]="address.hasError('required') && address.touched"
+      />
+
+      <p
+        *ngIf="address.hasError('required') && address.touched"
+        class="help is-danger"
+      >
+        Kötelező!
+      </p>
+
+      <button
+        id="submitRegistration"
+        class="btn btn-info btn-block my-4"
+        (click)="submit()"
+        [disabled]="!regForm.valid"
+      >
+        Regisztráció
+      </button>
+    </form>
+  </div>
+</div>

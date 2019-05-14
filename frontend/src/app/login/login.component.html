@@ -6,5 +6,52 @@
     <div *ngIf="error" class="notification is-danger">
       Unsuccessful login attempt. Please try again.
     </div>
+    <form [formGroup]="loginForm" novalidate>
+      <input
+        type="text"
+        class="form-control mb-4"
+        placeholder="Username"
+        id="username"
+        formControlName="username"
+        [class.is-danger]="username.hasError('required') && username.touched"
+      />
+
+      <p
+        *ngIf="username.hasError('required') && username.touched"
+        class="help is-danger"
+      >
+        Username is required
+      </p>
+
+      <input
+        type="password"
+        class="form-control mb-4"
+        placeholder="Password"
+        id="password"
+        formControlName="password"
+        [class.is-danger]="password.hasError('required') && password.touched"
+      />
+
+      <p
+        *ngIf="password.hasError('required') && password.touched"
+        class="help is-danger"
+      >
+        Password is required
+      </p>
+
+      <button
+        class="btn btn-info btn-block my-4"
+        id="loginButton"
+        (click)="submit()"
+        [disabled]="!loginForm.valid"
+      >
+        Login
+      </button>
+
+      <p>
+        Nem vagy regisztrálva?
+        <a routerLink="/issues/registration">Regisztráció</a>
+      </p>
+    </form>
   </div>
 </div>

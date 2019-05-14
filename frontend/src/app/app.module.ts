@@ -40,6 +40,8 @@ import { RegistrationComponent } from './registration/registration.component';
     RegistrationComponent,
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
