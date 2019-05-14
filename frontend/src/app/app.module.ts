@@ -22,12 +22,17 @@ import {
 import { AgmCoreModule } from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import {
+  HttpClientModule,
+  HttpClient,
+  HttpHeaders,
+} from '@angular/common/http';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { ApiServiceService } from './api-service.service';
 
 @NgModule({
   declarations: [
@@ -54,8 +59,9 @@ import { MainPageComponent } from './main-page/main-page.component';
     RouterModule,
     RouterTestingModule,
     RoutingModule,
-    HttpClientModule,
     HttpClient,
+    HttpHeaders,
+    HttpClientModule,
   ],
   exports: [
     BrowserModule,
@@ -69,8 +75,11 @@ import { MainPageComponent } from './main-page/main-page.component';
     MatListModule,
     RouterModule,
     RouterTestingModule,
+    HttpClient,
+    HttpHeaders,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ApiServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
