@@ -68,6 +68,7 @@ import { ApiServiceService } from './api-service.service';
     MatFormFieldModule,
     MatTableModule,
     HttpClientModule,
+    MatFormFieldModule,
   ],
   exports: [
     BrowserModule,
@@ -86,6 +87,7 @@ import { ApiServiceService } from './api-service.service';
     MatFormFieldModule,
     MatTableModule,
     HttpClientModule,
+    MatFormFieldModule,
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent],
