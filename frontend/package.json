@@ -26,7 +26,6 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
-    "angular-cli": "^1.0.0-beta.28.3",
     "angular2-carousel": "^1.0.17",
     "carousel": "0.0.3",
     "compodoc": "0.0.41",
