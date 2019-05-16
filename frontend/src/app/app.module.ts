@@ -19,6 +19,8 @@ import {
   MatListModule,
   MatFormFieldModule,
   MatTableModule,
+  MatMenuModule,
+  MatSliderModule,
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
@@ -31,8 +33,6 @@ import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.compo
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
-import { SearchBoxComponent } from './search-box/search-box.component';
-import { ElectronicsComponent } from './electronics/electronics.component';
 import { ApiServiceService } from './api-service.service';
 
 @NgModule({
@@ -43,8 +43,6 @@ import { ApiServiceService } from './api-service.service';
     MainPageComponent,
     ContactFormComponent,
     SearchBarComponent,
-    SearchBoxComponent,
-    ElectronicsComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +67,8 @@ import { ApiServiceService } from './api-service.service';
     MatTableModule,
     HttpClientModule,
     MatFormFieldModule,
+    MatMenuModule,
+    MatSliderModule,
   ],
   exports: [
     BrowserModule,
@@ -88,6 +88,8 @@ import { ApiServiceService } from './api-service.service';
     MatTableModule,
     HttpClientModule,
     MatFormFieldModule,
+    MatMenuModule,
+    MatSliderModule,
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent],

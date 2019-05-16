@@ -1,4 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+
+import {
+  MatFormFieldModule,
+  MatMenuModule,
+  MatSliderModule,
+} from '@angular/material';
 
 import { SearchBarComponent } from './search-bar.component';
 
@@ -9,6 +16,12 @@ describe('SearchBarComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SearchBarComponent],
+      imports: [
+        RouterModule,
+        MatFormFieldModule,
+        MatMenuModule,
+        MatSliderModule,
+      ],
     }).compileComponents();
   }));
 

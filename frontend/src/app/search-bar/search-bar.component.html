@@ -1,3 +1,40 @@
-<p>
-  search-bar works!
-</p>
+<div class="example-container">
+  <form class="form-inline md-form mr-auto mb-4">
+    <input
+      class="form-control mr-sm-2"
+      type="text"
+      placeholder="Search"
+      aria-label="Search"
+    />
+    <button mat-button [matMenuTriggerFor]="menu">Types</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Software</button>
+      <button mat-menu-item>Electronics</button>
+      <button mat-menu-item>Home</button>
+      <button mat-menu-item>Health</button>
+      <button mat-menu-item>Fashion</button>
+      <button mat-menu-item>Sport</button>
+      <button mat-menu-item>All</button>
+    </mat-menu>
+    <p>Price</p>
+    <mat-slider
+      thumbLabel
+      [displayWith]="formatLabel"
+      tickInterval="1000"
+      min="1"
+      max="100000"
+    >
+    </mat-slider>
+    <button
+      mdbBtn
+      size="sm"
+      color="elegant"
+      rounded="true"
+      class="my-0 waves-light"
+      mdbWavesEffect
+      type="submit"
+    >
+      Search
+    </button>
+  </form>
+</div>

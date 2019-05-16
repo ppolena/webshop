@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { MainPageComponent } from '../main-page/main-page.component';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
-import { ElectronicsComponent } from '../electronics/electronics.component';
+import { SearchBarComponent } from '../search-bar/search-bar.component';
 
 const routes: Routes = [
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'issues/electronics',
-    component: ElectronicsComponent,
+    component: SearchBarComponent,
   },
 ];
 
