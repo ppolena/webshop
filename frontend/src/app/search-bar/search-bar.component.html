@@ -17,6 +17,16 @@
       <button mat-menu-item>All</button>
     </mat-menu>
     <p>Price</p>
+    <p>Min</p>
+    <mat-slider
+      thumbLabel
+      [displayWith]="formatLabel"
+      tickInterval="1000"
+      min="1"
+      max="100000"
+    >
+    </mat-slider>
+    <p>Max</p>
     <mat-slider
       thumbLabel
       [displayWith]="formatLabel"
