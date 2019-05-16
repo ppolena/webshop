@@ -22,11 +22,7 @@ import {
 import { AgmCoreModule } from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {
-  HttpClientModule,
-  HttpClient,
-  HttpHeaders,
-} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
@@ -59,8 +55,6 @@ import { ApiServiceService } from './api-service.service';
     RouterModule,
     RouterTestingModule,
     RoutingModule,
-    HttpClient,
-    HttpHeaders,
     HttpClientModule,
   ],
   exports: [
@@ -75,8 +69,6 @@ import { ApiServiceService } from './api-service.service';
     MatListModule,
     RouterModule,
     RouterTestingModule,
-    HttpClient,
-    HttpHeaders,
     HttpClientModule,
   ],
   providers: [ApiServiceService],
