@@ -5,9 +5,13 @@ import {
   MatFormFieldModule,
   MatMenuModule,
   MatSliderModule,
+  MatCardModule,
+  MatIconModule,
+  MatListModule,
 } from '@angular/material';
 
 import { SearchBarComponent } from './search-bar.component';
+import { FavouriteCardsComponent } from '../favourite-cards/favourite-cards.component';
 
 describe('SearchBarComponent', () => {
   let component: SearchBarComponent;
@@ -15,12 +19,15 @@ describe('SearchBarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SearchBarComponent],
+      declarations: [SearchBarComponent, FavouriteCardsComponent],
       imports: [
         RouterModule,
         MatFormFieldModule,
         MatMenuModule,
         MatSliderModule,
+        MatCardModule,
+        MatIconModule,
+        MatListModule,
       ],
     }).compileComponents();
   }));

@@ -5,6 +5,7 @@
       type="text"
       placeholder="Search"
       aria-label="Search"
+      (input)="searchString.next($event.target.value)"
     />
     <button mat-button [matMenuTriggerFor]="menu">Types</button>
     <mat-menu #menu="matMenu">
@@ -47,4 +48,7 @@
       Search
     </button>
   </form>
+</div>
+<div id="menu">
+  <app-favourite-cards></app-favourite-cards>
 </div>

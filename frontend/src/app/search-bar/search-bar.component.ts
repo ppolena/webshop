@@ -1,4 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ContentChild,
+  TemplateRef,
+} from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import {
+  debounceTime,
+  distinctUntilChanged,
+  flatMap,
+  map,
+} from 'rxjs/operators';
 
 @Component({
   selector: 'app-search-bar',
