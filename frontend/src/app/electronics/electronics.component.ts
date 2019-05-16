@@ -73,11 +73,6 @@ const ELEMENT_DATA: Section[] = [
 })
 export class ElectronicsComponent implements OnInit {
   displayedColumns: string[] = ['title', 'details', 'prices'];
-  dataSource = new MatCardModule(ELEMENT_DATA);
-
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
 
   constructor() {}
 
