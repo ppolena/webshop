@@ -54,7 +54,7 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('frontend');
   }));
-  it('should render title in a h1 tag', async(() => {
+  it('should display welcome message', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
