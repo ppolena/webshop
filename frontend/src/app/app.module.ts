@@ -24,6 +24,7 @@ import {
 import { AgmCoreModule } from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
@@ -32,6 +33,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
+import { ApiServiceService } from './api-service.service';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,7 @@ import { ElectronicsComponent } from './electronics/electronics.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatTableModule,
+    HttpClientModule,
   ],
   exports: [
     BrowserModule,
@@ -82,8 +85,9 @@ import { ElectronicsComponent } from './electronics/electronics.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatTableModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ApiServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
