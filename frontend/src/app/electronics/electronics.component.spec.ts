@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
 
 import { ElectronicsComponent } from './electronics.component';
+import { MatFormFieldModule } from '@angular/material';
 
 describe('ElectronicsComponent', () => {
   let component: ElectronicsComponent;
@@ -10,7 +10,7 @@ describe('ElectronicsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ElectronicsComponent],
-      imports: [RouterModule],
+      imports: [MatFormFieldModule],
     }).compileComponents();
   }));
 
