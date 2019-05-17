@@ -19,12 +19,12 @@ import {
   MatInputModule,
 } from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 import {
   BrowserAnimationsModule,
   NoopAnimationsModule,
 } from '@angular/platform-browser/animations';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('MainPageComponent', () => {
   let component: MainPageComponent;
@@ -54,7 +54,7 @@ describe('MainPageComponent', () => {
         MatInputModule,
         ReactiveFormsModule,
         FormsModule,
-        HttpClientModule,
+        HttpClientTestingModule,
         BrowserAnimationsModule,
         NoopAnimationsModule,
       ],

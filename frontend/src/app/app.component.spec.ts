@@ -27,7 +27,7 @@ import { AgmCoreModule } from '@agm/core';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -59,7 +59,7 @@ describe('AppComponent', () => {
         MatInputModule,
         ReactiveFormsModule,
         FormsModule,
-        HttpClientModule,
+        HttpClientTestingModule,
       ],
     }).compileComponents();
   }));
