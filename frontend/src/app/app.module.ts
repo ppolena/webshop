@@ -28,6 +28,7 @@ import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { RegistrationComponent } from './registration/registration.component';
     ContactFormComponent,
     LoginComponent,
     RegistrationComponent,
+    AccountComponent,
   ],
   imports: [
     FormsModule,
