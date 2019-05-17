@@ -16,7 +16,7 @@ repositories {
 dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
 	compile 'org.springframework.boot:spring-boot-starter-data-rest'
-	//implementation 'org.springframework.boot:spring-boot-starter-security'
+	compile 'org.springframework.boot:spring-boot-starter-security'
 	compile group: 'org.springframework.data', name: 'spring-data-rest-hal-browser', version: '3.1.5.RELEASE'
 	compileOnly 'org.projectlombok:lombok'
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
