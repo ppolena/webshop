@@ -9,7 +9,7 @@ import {
 } from '@angular/material';
 
 import { SearchBarComponent } from './search-bar.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 describe('SearchBarComponent', () => {
   let component: SearchBarComponent;
@@ -25,6 +25,7 @@ describe('SearchBarComponent', () => {
         MatSelectModule,
         MatInputModule,
         ReactiveFormsModule,
+        FormsModule,
       ],
     }).compileComponents();
   }));
