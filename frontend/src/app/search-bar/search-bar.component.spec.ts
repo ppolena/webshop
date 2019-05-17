@@ -1,19 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
 
 import {
   MatFormFieldModule,
-  MatMenuModule,
   MatSliderModule,
-  MatCardModule,
   MatIconModule,
-  MatListModule,
   MatSelectModule,
   MatInputModule,
 } from '@angular/material';
 
 import { SearchBarComponent } from './search-bar.component';
-import { FavouriteCardsComponent } from '../favourite-cards/favourite-cards.component';
 
 describe('SearchBarComponent', () => {
   let component: SearchBarComponent;
@@ -23,13 +18,9 @@ describe('SearchBarComponent', () => {
     TestBed.configureTestingModule({
       declarations: [SearchBarComponent],
       imports: [
-        RouterModule,
         MatFormFieldModule,
-        MatMenuModule,
         MatSliderModule,
-        MatCardModule,
         MatIconModule,
-        MatListModule,
         MatSelectModule,
         MatInputModule,
       ],
