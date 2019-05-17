@@ -7,7 +7,17 @@ import { FavouriteCardsComponent } from '../favourite-cards/favourite-cards.comp
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
-import { MatCardModule, MatIconModule, MatListModule } from '@angular/material';
+import {
+  MatCardModule,
+  MatIconModule,
+  MatListModule,
+  MatGridListModule,
+  MatPaginatorModule,
+  MatFormFieldModule,
+  MatSliderModule,
+  MatSelectModule,
+  MatInputModule,
+} from '@angular/material';
 
 describe('MainPageComponent', () => {
   let component: MainPageComponent;
@@ -26,6 +36,14 @@ describe('MainPageComponent', () => {
         MatCardModule,
         MatIconModule,
         MatListModule,
+        MatCardModule,
+        MatIconModule,
+        MatGridListModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatSliderModule,
+        MatSelectModule,
+        MatInputModule,
       ],
     }).compileComponents();
   }));

@@ -15,6 +15,12 @@ import {
   MatIconModule,
   MatCardModule,
   MatListModule,
+  MatGridListModule,
+  MatPaginatorModule,
+  MatFormFieldModule,
+  MatSliderModule,
+  MatSelectModule,
+  MatInputModule,
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
@@ -41,6 +47,14 @@ describe('AppComponent', () => {
         MatListModule,
         RouterModule,
         RouterTestingModule,
+        MatCardModule,
+        MatIconModule,
+        MatGridListModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatSliderModule,
+        MatSelectModule,
+        MatInputModule,
       ],
     }).compileComponents();
   }));
