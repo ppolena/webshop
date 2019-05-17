@@ -12,6 +12,7 @@ import {
 } from '@angular/material';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { ApiServiceService } from '../api-service.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('FavouriteCardsComponent', () => {
   let component: FavouriteCardsComponent;
@@ -29,6 +30,7 @@ describe('FavouriteCardsComponent', () => {
         MatSliderModule,
         MatSelectModule,
         MatInputModule,
+        ReactiveFormsModule,
       ],
       providers: [ApiServiceService],
     }).compileComponents();

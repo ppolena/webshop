@@ -26,6 +26,7 @@ import {
 import { AgmCoreModule } from '@agm/core';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -55,6 +56,7 @@ describe('AppComponent', () => {
         MatSliderModule,
         MatSelectModule,
         MatInputModule,
+        ReactiveFormsModule,
       ],
     }).compileComponents();
   }));

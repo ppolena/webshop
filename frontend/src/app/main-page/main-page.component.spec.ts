@@ -18,6 +18,7 @@ import {
   MatSelectModule,
   MatInputModule,
 } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('MainPageComponent', () => {
   let component: MainPageComponent;
@@ -44,6 +45,7 @@ describe('MainPageComponent', () => {
         MatSliderModule,
         MatSelectModule,
         MatInputModule,
+        ReactiveFormsModule,
       ],
     }).compileComponents();
   }));
