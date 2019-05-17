@@ -22,6 +22,9 @@ import {
   MatMenuModule,
   MatSliderModule,
   MatPaginatorModule,
+  MatGridListModule,
+  MatSelectModule,
+  MatInputModule,
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
@@ -71,6 +74,9 @@ import { ApiServiceService } from './api-service.service';
     MatMenuModule,
     MatSliderModule,
     MatPaginatorModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatInputModule,
   ],
   exports: [
     BrowserModule,
@@ -93,6 +99,9 @@ import { ApiServiceService } from './api-service.service';
     MatMenuModule,
     MatSliderModule,
     MatPaginatorModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatInputModule,
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent],

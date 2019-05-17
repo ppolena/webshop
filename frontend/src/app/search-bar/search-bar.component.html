@@ -1,41 +1,50 @@
 <div class="example-container">
-  <form class="form-inline md-form mr-auto mb-4">
-    <input
-      class="form-control mr-sm-2"
-      type="text"
-      placeholder="Search"
-      aria-label="Search"
-      (input)="searchString.next($event.target.value)"
-    />
-    <button mat-button [matMenuTriggerFor]="menu">Types</button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Software</button>
-      <button mat-menu-item>Electronics</button>
-      <button mat-menu-item>Home</button>
-      <button mat-menu-item>Health</button>
-      <button mat-menu-item>Fashion</button>
-      <button mat-menu-item>Sport</button>
-      <button mat-menu-item>All</button>
-    </mat-menu>
+  <form class="form-inline md-form mr-auto mb-4" (submit)="search()">
+    <mat-form-field>
+      <input
+        matInput
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        [formControl]="searchText"
+        name="searchText"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Type</mat-label>
+      <mat-select [(value)]="selectedType">
+        <mat-option *ngFor="let type of types" [value]="type.value">
+          {{ type.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
     <p>Price</p>
     <p>Min</p>
     <mat-slider
       thumbLabel
       [displayWith]="formatLabel"
-      tickInterval="1000"
-      min="1"
-      max="100000"
+      min="0"
+      max="10000"
+      [(value)]="lower"
     >
     </mat-slider>
     <p>Max</p>
     <mat-slider
       thumbLabel
       [displayWith]="formatLabel"
-      tickInterval="1000"
-      min="1"
-      max="100000"
+      min="{{ lower }}"
+      max="10000"
+      [(value)]="upper"
     >
     </mat-slider>
+
+    <button mat-icon-button (click)="changeSortDirection()">
+      <mat-icon *ngIf="sortDirection === 'desc'">arrow_drop_down</mat-icon>
+      <mat-icon *ngIf="sortDirection === 'asc'">arrow_drop_up</mat-icon>
+    </button>
+
     <button
       mdbBtn
       size="sm"
@@ -48,7 +57,4 @@
       Search
     </button>
   </form>
-</div>
-<div id="menu">
-  <app-favourite-cards></app-favourite-cards>
 </div>

@@ -15,10 +15,4 @@ export class MerchandiseList {
     totalPages: number;
     number: number;
   };
-  Chat;
-  Conversation;
-  End;
-  Type;
-  a;
-  message;
 }
