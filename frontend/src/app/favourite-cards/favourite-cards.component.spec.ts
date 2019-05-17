@@ -1,13 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FavouriteCardsComponent } from './favourite-cards.component';
-
 import {
   MatCardModule,
   MatIconModule,
-  MatPaginatorModule,
   MatGridListModule,
+  MatPaginatorModule,
 } from '@angular/material';
+import { SearchBarComponent } from '../search-bar/search-bar.component';
 
 describe('FavouriteCardsComponent', () => {
   let component: FavouriteCardsComponent;
@@ -15,7 +14,7 @@ describe('FavouriteCardsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FavouriteCardsComponent],
+      declarations: [FavouriteCardsComponent, SearchBarComponent],
       imports: [
         MatCardModule,
         MatIconModule,
