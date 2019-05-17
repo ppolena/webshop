@@ -5,6 +5,10 @@ import {
   MatIconModule,
   MatGridListModule,
   MatPaginatorModule,
+  MatFormFieldModule,
+  MatSliderModule,
+  MatSelectModule,
+  MatInputModule,
 } from '@angular/material';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { ApiServiceService } from '../api-service.service';
@@ -21,6 +25,10 @@ describe('FavouriteCardsComponent', () => {
         MatIconModule,
         MatGridListModule,
         MatPaginatorModule,
+        MatFormFieldModule,
+        MatSliderModule,
+        MatSelectModule,
+        MatInputModule,
       ],
       providers: [ApiServiceService],
     }).compileComponents();
