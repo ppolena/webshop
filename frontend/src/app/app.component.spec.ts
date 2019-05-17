@@ -15,6 +15,7 @@ import {
   MatIconModule,
   MatCardModule,
   MatListModule,
+  MatDialogModule,
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
@@ -41,6 +42,7 @@ describe('AppComponent', () => {
         MatListModule,
         RouterModule,
         RouterTestingModule,
+        MatDialogModule,
       ],
     }).compileComponents();
   }));

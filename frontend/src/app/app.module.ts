@@ -17,6 +17,7 @@ import {
   MatIconModule,
   MatCardModule,
   MatListModule,
+  MatDialogModule,
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
@@ -25,7 +26,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
+import {
+  FavouriteCardsComponent,
+  CardsDialog,
+} from './favourite-cards/favourite-cards.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ApiServiceService } from './api-service.service';
@@ -39,6 +43,7 @@ import { ItemDialogComponent } from './item-dialog/item-dialog.component';
     MainPageComponent,
     ContactFormComponent,
     ItemDialogComponent,
+    CardsDialog,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +63,7 @@ import { ItemDialogComponent } from './item-dialog/item-dialog.component';
     RouterTestingModule,
     RoutingModule,
     HttpClientModule,
+    MatDialogModule,
   ],
   exports: [
     BrowserModule,
@@ -72,6 +78,7 @@ import { ItemDialogComponent } from './item-dialog/item-dialog.component';
     RouterModule,
     RouterTestingModule,
     HttpClientModule,
+    MatDialogModule,
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent],

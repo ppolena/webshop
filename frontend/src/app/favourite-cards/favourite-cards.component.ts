@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { MatDialogRef, MatDialog } from '@angular/material';
 
 export interface Section {
   imgUrl: string;
@@ -14,9 +15,7 @@ export interface Section {
   styleUrls: ['./favourite-cards.component.css'],
 })
 export class FavouriteCardsComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+  constructor(private dialog: MatDialog) {}
 
   cards: Section[] = [
     {
@@ -74,4 +73,22 @@ export class FavouriteCardsComponent implements OnInit {
       price: '2 500Ft',
     },
   ];
+
+  openDialog() {
+    const dialogRef = this.dialog.open(CardsDialog);
+  }
+
+  ngOnInit() {}
+}
+
+@Component({
+  selector: 'cards-dialog',
+  templateUrl: 'cards-dialog.html',
+})
+export class CardsDialog {
+  constructor(public dialogRef: MatDialogRef<CardsDialog>) {}
+
+  onCartClick(): void {
+    this.dialogRef.close(true);
+  }
 }
