@@ -19,6 +19,7 @@ import {
   MatInputModule,
 } from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('MainPageComponent', () => {
   let component: MainPageComponent;
@@ -47,6 +48,7 @@ describe('MainPageComponent', () => {
         MatInputModule,
         ReactiveFormsModule,
         FormsModule,
+        HttpClientModule,
       ],
     }).compileComponents();
   }));

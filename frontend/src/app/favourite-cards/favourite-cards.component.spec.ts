@@ -13,6 +13,7 @@ import {
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { ApiServiceService } from '../api-service.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('FavouriteCardsComponent', () => {
   let component: FavouriteCardsComponent;
@@ -32,6 +33,7 @@ describe('FavouriteCardsComponent', () => {
         MatInputModule,
         ReactiveFormsModule,
         FormsModule,
+        HttpClientModule,
       ],
       providers: [ApiServiceService],
     }).compileComponents();
