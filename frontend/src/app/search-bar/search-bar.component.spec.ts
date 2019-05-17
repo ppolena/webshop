@@ -10,6 +10,10 @@ import {
 
 import { SearchBarComponent } from './search-bar.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 
 describe('SearchBarComponent', () => {
   let component: SearchBarComponent;
@@ -26,6 +30,8 @@ describe('SearchBarComponent', () => {
         MatInputModule,
         ReactiveFormsModule,
         FormsModule,
+        BrowserAnimationsModule,
+        NoopAnimationsModule,
       ],
     }).compileComponents();
   }));

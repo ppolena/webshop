@@ -14,7 +14,10 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { ApiServiceService } from '../api-service.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 
 describe('FavouriteCardsComponent', () => {
   let component: FavouriteCardsComponent;
@@ -36,6 +39,7 @@ describe('FavouriteCardsComponent', () => {
         FormsModule,
         HttpClientModule,
         BrowserAnimationsModule,
+        NoopAnimationsModule,
       ],
       providers: [ApiServiceService],
     }).compileComponents();

@@ -21,7 +21,10 @@ import {
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 
 describe('MainPageComponent', () => {
   let component: MainPageComponent;
@@ -53,6 +56,7 @@ describe('MainPageComponent', () => {
         FormsModule,
         HttpClientModule,
         BrowserAnimationsModule,
+        NoopAnimationsModule,
       ],
     }).compileComponents();
   }));
