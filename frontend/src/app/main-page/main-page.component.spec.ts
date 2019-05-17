@@ -20,6 +20,8 @@ import {
 } from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchBarComponent } from '../search-bar/search-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('MainPageComponent', () => {
   let component: MainPageComponent;
@@ -31,6 +33,7 @@ describe('MainPageComponent', () => {
         MainPageComponent,
         MainCarouselComponent,
         FavouriteCardsComponent,
+        SearchBarComponent,
       ],
       imports: [
         CarouselModule.forRoot(),
@@ -49,6 +52,7 @@ describe('MainPageComponent', () => {
         ReactiveFormsModule,
         FormsModule,
         HttpClientModule,
+        BrowserAnimationsModule,
       ],
     }).compileComponents();
   }));

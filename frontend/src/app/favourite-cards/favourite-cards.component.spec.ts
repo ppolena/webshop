@@ -14,6 +14,7 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { ApiServiceService } from '../api-service.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('FavouriteCardsComponent', () => {
   let component: FavouriteCardsComponent;
@@ -34,6 +35,7 @@ describe('FavouriteCardsComponent', () => {
         ReactiveFormsModule,
         FormsModule,
         HttpClientModule,
+        BrowserAnimationsModule,
       ],
       providers: [ApiServiceService],
     }).compileComponents();
