@@ -10,6 +10,7 @@ import {
   BrowserAnimationsModule,
   NoopAnimationsModule,
 } from '@angular/platform-browser/animations';
+
 import {
   MatButtonModule,
   MatCheckboxModule,
@@ -17,10 +18,13 @@ import {
   MatIconModule,
   MatCardModule,
   MatListModule,
+  MatTabsModule,
+  MatMenuModule
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CommonModule }  from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -28,13 +32,9 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
-<<<<<<< HEAD
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { AccountComponent } from './account/account.component';
-=======
 import { ApiServiceService } from './api-service.service';
->>>>>>> 86db2921a0a02ab2bd5a3dd1d3dc1a5d3cbd931d
 
 @NgModule({
   declarations: [
@@ -43,12 +43,8 @@ import { ApiServiceService } from './api-service.service';
     MainCarouselComponent,
     MainPageComponent,
     ContactFormComponent,
-<<<<<<< HEAD
     LoginComponent,
-    RegistrationComponent,
-    AccountComponent,
-=======
->>>>>>> 86db2921a0a02ab2bd5a3dd1d3dc1a5d3cbd931d
+    RegistrationComponent
   ],
   imports: [
     FormsModule,
@@ -69,10 +65,10 @@ import { ApiServiceService } from './api-service.service';
     RouterModule,
     RouterTestingModule,
     RoutingModule,
-<<<<<<< HEAD
-=======
     HttpClientModule,
->>>>>>> 86db2921a0a02ab2bd5a3dd1d3dc1a5d3cbd931d
+    MatTabsModule,
+    MatMenuModule,
+    CommonModule
   ],
   exports: [
     BrowserModule,
@@ -87,6 +83,8 @@ import { ApiServiceService } from './api-service.service';
     RouterModule,
     RouterTestingModule,
     HttpClientModule,
+    MatMenuModule,
+    CommonModule
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent],

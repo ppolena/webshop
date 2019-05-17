@@ -15,7 +15,11 @@ import {
   MatIconModule,
   MatCardModule,
   MatListModule,
+  MatMenuModule
 } from '@angular/material';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule }  from '@angular/common';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -41,6 +45,10 @@ describe('AppComponent', () => {
         MatListModule,
         RouterModule,
         RouterTestingModule,
+        MatMenuModule,
+        FormsModule, 
+        ReactiveFormsModule,
+        CommonModule
       ],
     }).compileComponents();
   }));
