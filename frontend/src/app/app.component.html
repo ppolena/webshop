@@ -29,9 +29,9 @@
 
         <!-- this creates a google map on the page with the given lat/lng from -->
         <!-- the component as the initial center of the map: -->
-        <!--         <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-map [latitude]="lat" [longitude]="lng">
           <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-        </agm-map> -->
+        </agm-map>
       </div>
       <!-- Grid column -->
 
@@ -53,7 +53,11 @@
           </mat-list-item>
           <mat-list-item>
             <div class="example-button-row">
-              <a mat-raised-button routerLink=".">ÚTVONAL TERVEZÉS</a>
+              <a
+                mat-raised-button
+                href="https://www.google.com/maps/dir//Budapest,+Alkot%C3%A1s+u.+3,+1123/@47.5004014,19.0214897,17z/data=!4m17!1m7!3m6!1s0x4741dc2090d2f1ff:0x6ba416e94225fa5b!2sBudapest,+Alkot%C3%A1s+u.+3,+1123!3b1!8m2!3d47.5004014!4d19.0236784!4m8!1m0!1m5!1m1!1s0x4741dc2090d2f1ff:0x6ba416e94225fa5b!2m2!1d19.0236784!2d47.5004014!3e3"
+                >ÚTVONAL TERVEZÉS</a
+              >
             </div>
           </mat-list-item>
         </mat-list>
