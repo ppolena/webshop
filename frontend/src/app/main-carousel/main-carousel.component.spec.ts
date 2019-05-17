@@ -15,10 +15,10 @@ describe('MainCarouselComponent', () => {
       declarations: [MainCarouselComponent],
       imports: [CarouselModule.forRoot(), RouterModule],
       providers: [
-        {
+        /*         {
           provide: HAMMER_LOADER,
           useValue: () => new Promise(() => {}),
-        },
+        }, */
       ],
     }).compileComponents();
   }));
