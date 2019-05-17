@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { MainCarouselComponent } from './main-carousel.component';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { HAMMER_LOADER } from '@angular/platform-browser';
 
 describe('MainCarouselComponent', () => {
   let component: MainCarouselComponent;
@@ -13,6 +14,12 @@ describe('MainCarouselComponent', () => {
     TestBed.configureTestingModule({
       declarations: [MainCarouselComponent],
       imports: [CarouselModule.forRoot(), RouterModule],
+      providers: [
+        {
+          provide: HAMMER_LOADER,
+          useValue: () => new Promise(() => {}),
+        },
+      ],
     }).compileComponents();
   }));
 
