@@ -37,7 +37,7 @@ import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.compo
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
-import { ApiServiceService } from './api-service.service';
+import { ApiService } from './api.service';
 
 @NgModule({
   declarations: [
@@ -103,7 +103,7 @@ import { ApiServiceService } from './api-service.service';
     MatSelectModule,
     MatInputModule,
   ],
-  providers: [ApiServiceService],
+  providers: [ApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QueryParams } from '../search-bar/query-params';
-import { ApiServiceService } from '../api-service.service';
+import { ApiService } from '../api.service';
 import { MerchandiseList } from '../merchandise-list';
 import Merchandise from '../merchandise';
 import { PageEvent } from '@angular/material';
@@ -17,7 +17,7 @@ export class FavouriteCardsComponent implements OnInit {
   size: number = 12;
   totalElements: number;
 
-  constructor(private apiService: ApiServiceService) {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     this.queryParams = new QueryParams('', 'ALL', 0, 100000, 'price,asc');

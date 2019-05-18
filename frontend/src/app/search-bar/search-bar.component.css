@@ -12,6 +12,14 @@ p {
 }
 
 mat-slider {
-  width: 300px;
-  margin-right: 15px;
+  width: 200px;
+}
+
+#price {
+  margin-left: 15px;
+}
+
+#priceTitle {
+  text-align: center;
+  margin: 0;
 }

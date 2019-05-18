@@ -20,41 +20,40 @@
       </mat-select>
     </mat-form-field>
 
-    <p>Price</p>
-    <p>Min</p>
-    <mat-slider
-      thumbLabel
-      [displayWith]="formatLabel"
-      min="0"
-      max="10000"
-      [(value)]="lower"
-    >
-    </mat-slider>
-    <p>Max</p>
-    <mat-slider
-      thumbLabel
-      [displayWith]="formatLabel"
-      min="{{ lower }}"
-      max="10000"
-      [(value)]="upper"
-    >
-    </mat-slider>
+    <div id="price">
+      <p id="priceTitle">Price</p>
+      <div>
+        <span>Min</span>
+        <mat-slider
+          invert
+          thumbLabel
+          [displayWith]="formatLabel"
+          min="-10000"
+          step="100"
+          max="0"
+          [(value)]="lower"
+        >
+        </mat-slider>
+        <mat-slider
+          thumbLabel
+          [displayWith]="formatLabel"
+          min="{{ lower * -1 }}"
+          step="100"
+          max="10000"
+          [(value)]="upper"
+        >
+        </mat-slider>
+        <span>Max</span>
+      </div>
+    </div>
 
     <button mat-icon-button (click)="changeSortDirection()">
-      <mat-icon *ngIf="sortDirection === 'desc'">arrow_drop_down</mat-icon>
-      <mat-icon *ngIf="sortDirection === 'asc'">arrow_drop_up</mat-icon>
+      <mat-icon *ngIf="sortDirection === 'desc'">arrow_downward</mat-icon>
+      <mat-icon *ngIf="sortDirection === 'asc'">arrow_upward</mat-icon>
     </button>
 
-    <button
-      mdbBtn
-      size="sm"
-      color="elegant"
-      rounded="true"
-      class="my-0 waves-light"
-      mdbWavesEffect
-      type="submit"
-    >
-      Search
+    <button mat-mini-fab type="submit">
+      <mat-icon>search</mat-icon>
     </button>
   </form>
 </div>

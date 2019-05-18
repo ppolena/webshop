@@ -11,7 +11,7 @@ import {
   MatInputModule,
 } from '@angular/material';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
-import { ApiServiceService } from '../api-service.service';
+import { ApiService } from '../api.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {
   BrowserAnimationsModule,
@@ -41,7 +41,7 @@ describe('FavouriteCardsComponent', () => {
         BrowserAnimationsModule,
         NoopAnimationsModule,
       ],
-      providers: [ApiServiceService],
+      providers: [ApiService],
     }).compileComponents();
   }));
 

@@ -40,6 +40,10 @@ export class SearchBarComponent implements OnInit {
       return 0;
     }
 
+    if (value < 0) {
+      value = value * -1;
+    }
+
     if (value >= 1000) {
       return Math.round(value / 100) / 10 + 'k';
     }
@@ -56,7 +60,7 @@ export class SearchBarComponent implements OnInit {
     let queryParams = new QueryParams(
       this.searchText.value,
       this.selectedType,
-      this.lower,
+      this.lower * -1,
       this.upper,
       'price,' + this.sortDirection
     );
