@@ -3,6 +3,10 @@ import { RouterModule } from '@angular/router';
 
 import { ShoppingCartComponent } from './shopping-cart.component';
 
+import { MatCardModule, 
+         MatIconModule,
+         MatListModule} from '@angular/material';
+
 describe('ShoppingCartComponent', () => {
   let component: ShoppingCartComponent;
   let fixture: ComponentFixture<ShoppingCartComponent>;
@@ -10,7 +14,10 @@ describe('ShoppingCartComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ShoppingCartComponent],
-      imports: [RouterModule],
+      imports: [MatCardModule,
+                MatIconModule,
+                MatListModule,
+                RouterModule],
     }).compileComponents();
   }));
 
