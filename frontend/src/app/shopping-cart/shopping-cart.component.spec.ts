@@ -1,11 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { ShoppingCartComponent } from './shopping-cart.component';
 
-import { MatCardModule, 
-         MatIconModule,
-         MatListModule} from '@angular/material';
+import { MatCardModule, MatIconModule, MatListModule } from '@angular/material';
 
 describe('ShoppingCartComponent', () => {
   let component: ShoppingCartComponent;
@@ -14,10 +13,13 @@ describe('ShoppingCartComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ShoppingCartComponent],
-      imports: [MatCardModule,
-                MatIconModule,
-                MatListModule,
-                RouterModule],
+      imports: [
+        MatCardModule,
+        MatIconModule,
+        MatListModule,
+        RouterModule,
+        RouterTestingModule,
+      ],
     }).compileComponents();
   }));
 
