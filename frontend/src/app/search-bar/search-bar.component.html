@@ -1,6 +1,6 @@
 <div class="example-container">
-  <form class="form-inline md-form mr-auto mb-4" (submit)="search()">
-    <mat-form-field>
+  <form class="searchBar form-inline md-form mr-auto mb-4" (submit)="search()">
+    <mat-form-field class="searchBarFormField">
       <input
         matInput
         type="search"
@@ -11,7 +11,7 @@
       />
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field class="searchBarFormField">
       <mat-label>Type</mat-label>
       <mat-select [(value)]="selectedType">
         <mat-option *ngFor="let type of types" [value]="type.value">
