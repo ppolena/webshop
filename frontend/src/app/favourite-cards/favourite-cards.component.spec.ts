@@ -9,6 +9,8 @@ import {
   MatIconModule,
   MatListModule,
   MatDialogModule,
+  MatDialogRef,
+  MatDialog,
 } from '@angular/material';
 
 describe('FavouriteCardsComponent', () => {
@@ -24,6 +26,8 @@ describe('FavouriteCardsComponent', () => {
         MatListModule,
         RouterModule,
         MatDialogModule,
+        MatDialogRef,
+        MatDialog,
       ],
     }).compileComponents();
   }));
