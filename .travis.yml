@@ -34,7 +34,7 @@ jobs:
         - npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
         - npm run compodoc
       before_deploy:
-        - npm build
+        - npm run build
         - cd ..
         - cd backend
         - ./gradlew build
