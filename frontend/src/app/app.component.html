@@ -1,9 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<mat-toolbar>
-  <button mat-button routerLink="/issues">Kezdőlap</button>
-  <button mat-button routerLink="/issues">Termékek</button>
-  <button mat-button routerLink="/issues/contact">Kapcsolat</button>
+<mat-toolbar class="toolbar">
+  <div>
+    <button mat-button routerLink="/issues">Kezdőlap</button>
+    <button mat-button routerLink="/issues/electronics">Termékek</button>
+    <button mat-button routerLink="/issues/contact">Kapcsolat</button>
+  </div>
   <div class="icon-login-and-cart">
     <button mat-button routerLink=""><mat-icon>shopping_cart</mat-icon></button>
     <button mat-button routerLink="">
@@ -53,7 +55,11 @@
           </mat-list-item>
           <mat-list-item>
             <div class="example-button-row">
-              <a mat-raised-button routerLink=".">ÚTVONAL TERVEZÉS</a>
+              <a
+                mat-raised-button
+                href="https://www.google.com/maps/dir//Budapest,+Alkot%C3%A1s+u.+3,+1123/@47.5004014,19.0214897,17z/data=!4m17!1m7!3m6!1s0x4741dc2090d2f1ff:0x6ba416e94225fa5b!2sBudapest,+Alkot%C3%A1s+u.+3,+1123!3b1!8m2!3d47.5004014!4d19.0236784!4m8!1m0!1m5!1m1!1s0x4741dc2090d2f1ff:0x6ba416e94225fa5b!2m2!1d19.0236784!2d47.5004014!3e3"
+                >ÚTVONAL TERVEZÉS</a
+              >
             </div>
           </mat-list-item>
         </mat-list>

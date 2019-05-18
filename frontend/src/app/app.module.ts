@@ -17,6 +17,14 @@ import {
   MatIconModule,
   MatCardModule,
   MatListModule,
+  MatFormFieldModule,
+  MatTableModule,
+  MatMenuModule,
+  MatSliderModule,
+  MatPaginatorModule,
+  MatGridListModule,
+  MatSelectModule,
+  MatInputModule,
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
@@ -28,7 +36,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { ApiServiceService } from './api-service.service';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { ApiService } from './api.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +46,7 @@ import { ApiServiceService } from './api-service.service';
     MainCarouselComponent,
     MainPageComponent,
     ContactFormComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +65,18 @@ import { ApiServiceService } from './api-service.service';
     RouterModule,
     RouterTestingModule,
     RoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatTableModule,
     HttpClientModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatSliderModule,
+    MatPaginatorModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatInputModule,
   ],
   exports: [
     BrowserModule,
@@ -69,9 +90,20 @@ import { ApiServiceService } from './api-service.service';
     MatListModule,
     RouterModule,
     RouterTestingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatTableModule,
     HttpClientModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatSliderModule,
+    MatPaginatorModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatInputModule,
   ],
-  providers: [ApiServiceService],
+  providers: [ApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

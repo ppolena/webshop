@@ -4,21 +4,21 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 
-import { ApiServiceService } from './api-service.service';
+import { ApiService } from './api.service';
 
 describe('ApiServiceService', () => {
-  let service: ApiServiceService;
+  let service: ApiService;
   let backend: HttpTestingController;
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      providers: [ApiServiceService],
+      providers: [ApiService],
       imports: [HttpClientTestingModule],
     })
   );
 
   it('should be created', () => {
-    const service: ApiServiceService = TestBed.get(ApiServiceService);
+    const service: ApiService = TestBed.get(ApiService);
     expect(service).toBeTruthy();
   });
 });

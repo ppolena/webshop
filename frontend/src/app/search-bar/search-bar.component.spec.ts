@@ -1,52 +1,43 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FavouriteCardsComponent } from './favourite-cards.component';
+
 import {
-  MatCardModule,
-  MatIconModule,
-  MatGridListModule,
-  MatPaginatorModule,
   MatFormFieldModule,
   MatSliderModule,
+  MatIconModule,
   MatSelectModule,
   MatInputModule,
 } from '@angular/material';
-import { SearchBarComponent } from '../search-bar/search-bar.component';
-import { ApiService } from '../api.service';
+
+import { SearchBarComponent } from './search-bar.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {
   BrowserAnimationsModule,
   NoopAnimationsModule,
 } from '@angular/platform-browser/animations';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('FavouriteCardsComponent', () => {
-  let component: FavouriteCardsComponent;
-  let fixture: ComponentFixture<FavouriteCardsComponent>;
+describe('SearchBarComponent', () => {
+  let component: SearchBarComponent;
+  let fixture: ComponentFixture<SearchBarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FavouriteCardsComponent, SearchBarComponent],
+      declarations: [SearchBarComponent],
       imports: [
-        MatCardModule,
-        MatIconModule,
-        MatGridListModule,
-        MatPaginatorModule,
         MatFormFieldModule,
         MatSliderModule,
+        MatIconModule,
         MatSelectModule,
         MatInputModule,
         ReactiveFormsModule,
         FormsModule,
-        HttpClientTestingModule,
         BrowserAnimationsModule,
         NoopAnimationsModule,
       ],
-      providers: [ApiService],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FavouriteCardsComponent);
+    fixture = TestBed.createComponent(SearchBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

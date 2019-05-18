@@ -1,3 +1,17 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+mat-grid-list {
+  position: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 p {
   margin: 50px;
   text-align: center;
@@ -6,17 +20,24 @@ p {
   font-weight: regular;
 }
 
-.cardList {
+.example-card {
   display: flex;
-  flex-direction: row;
-  margin-left: 110px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 300px;
 }
 
-.example-card {
-  max-width: 300px;
-  margin: 50px;
+.cardContent {
+  width: calc(100% + 32px);
+  height: 150px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.cardImage {
+  height: 200px;
+  margin-bottom: 0;
 }
 
 .example-card p {
@@ -26,12 +47,19 @@ p {
 }
 
 .example-header-image {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
 }
 
 .footer-card {
   background: #374653;
+  width: calc(100% + 32px);
+  height: 100px;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.footer-card p {
+  margin: 0;
 }
 
 .button p {
@@ -43,4 +71,8 @@ p {
 
 .button {
   text-align: center;
+}
+
+#paginator {
+  width: 100%;
 }
