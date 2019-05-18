@@ -29,6 +29,7 @@ import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.compo
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ApiServiceService } from './api-service.service';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ApiServiceService } from './api-service.service';
     MainCarouselComponent,
     MainPageComponent,
     ContactFormComponent,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,
