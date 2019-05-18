@@ -1,0 +1,48 @@
+mat-icon {
+  position: right;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.mat-toolbar {
+  color: white;
+  background: #374653;
+  margin-bottom: 50px;
+}
+
+.list-unstyled {
+  margin-top: 25px;
+}
+
+mat-list {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.mat-list-base .mat-list-item {
+  color: white;
+}
+
+.mat-raised-button {
+  font-size: 18px;
+  background: #f19345;
+  color: white;
+}
+
+footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background: #374653;
+  overflow: hidden;
+  display: block;
+}
+agm-map {
+  height: 300px;
+}

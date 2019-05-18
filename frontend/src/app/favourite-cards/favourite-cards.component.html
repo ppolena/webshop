@@ -1,0 +1,40 @@
+<div id="container">
+  <app-search-bar (queryParams)="setQueryParams($event)"></app-search-bar>
+
+  <mat-grid-list cols="3" rowHeight="1:1.15">
+    <mat-grid-tile *ngFor="let merchandise of merchandiseList">
+      <mat-card class="example-card">
+        <img class="cardImage" mat-card-image src="{{ merchandise.image }}" />
+        <mat-card-content class="cardContent">
+          <p style="font-weight: bold;">
+            {{ merchandise.name }}
+          </p>
+          <p>
+            {{ merchandise.description }}
+          </p>
+        </mat-card-content>
+        <mat-card-footer class="footer-card">
+          <mat-card-actions class="button">
+            <p>{{ merchandise.price }}</p>
+            <button mat-button style="color: white; text-align: center;">
+              <mat-icon
+                style="color: white;
+                text-align: center;"
+                >star_rate </mat-icon
+              >Tedd a kosárba!
+            </button>
+          </mat-card-actions>
+        </mat-card-footer>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-paginator
+    id="paginator"
+    showFirstLastButtons="true"
+    [pageSizeOptions]="[12, 24, 48, 96]"
+    [length]="totalElements"
+    [pageSize]="size"
+    (page)="showNewPage($event)"
+  ></mat-paginator>
+</div>

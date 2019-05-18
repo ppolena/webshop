@@ -1,10 +1,65 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
+import { BrowserModule } from '@angular/platform-browser';
+
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatListModule,
+  MatGridListModule,
+  MatPaginatorModule,
+  MatFormFieldModule,
+  MatSliderModule,
+  MatSelectModule,
+  MatInputModule,
+} from '@angular/material';
+
+import { AgmCoreModule } from '@agm/core';
+
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
+      declarations: [AppComponent],
+      imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        NoopAnimationsModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        MatToolbarModule,
+        MatIconModule,
+        AgmCoreModule.forRoot({
+          apiKey: 'YOUR_KEY',
+        }),
+        CarouselModule.forRoot(),
+        MatCardModule,
+        MatListModule,
+        RouterModule,
+        RouterTestingModule,
+        MatCardModule,
+        MatIconModule,
+        MatGridListModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatSliderModule,
+        MatSelectModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientTestingModule,
       ],
     }).compileComponents();
   }));
@@ -22,6 +77,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to frontend!');
+    expect(compiled.querySelector('h1').textContent).toContain(
+      'Welcome to frontend!'
+    );
   }));
 });

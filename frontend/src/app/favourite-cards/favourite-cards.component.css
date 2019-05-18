@@ -1,0 +1,78 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+mat-grid-list {
+  position: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+p {
+  margin: 50px;
+  text-align: center;
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: regular;
+}
+
+.example-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 300px;
+}
+
+.cardContent {
+  width: calc(100% + 32px);
+  height: 150px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.cardImage {
+  height: 200px;
+  margin-bottom: 0;
+}
+
+.example-card p {
+  font-size: 16px;
+  text-align: inherit;
+  margin: 15px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.footer-card {
+  background: #374653;
+  width: calc(100% + 32px);
+  height: 100px;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.footer-card p {
+  margin: 0;
+}
+
+.button p {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.button {
+  text-align: center;
+}
+
+#paginator {
+  width: 100%;
+}

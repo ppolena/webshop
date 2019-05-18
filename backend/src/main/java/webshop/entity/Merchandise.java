@@ -3,6 +3,7 @@ package webshop.entity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import lombok.experimental.Accessors;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.Column;
@@ -16,6 +17,7 @@ import javax.validation.constraints.Size;
 import static javax.persistence.EnumType.STRING;
 
 @Data
+@Accessors(chain = true)
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 @Entity
@@ -28,6 +30,7 @@ public class Merchandise extends BaseEntity {
     @Column(name = "name", nullable = false, length = 100)
     private String name;
 
+    @NotNull
     @Enumerated(STRING)
     private MerchandiseType type;
 
@@ -42,12 +45,12 @@ public class Merchandise extends BaseEntity {
     @Column(name = "price", nullable = false)
     private double price;
 
-    @Column(name = "thumbnail", nullable = false, columnDefinition = "text")
+    @Column(name = "thumbnail", columnDefinition = "text")
     private String thumbnail;
 
-    @Column(name = "image", nullable = false, columnDefinition = "text")
+    @Column(name = "image", columnDefinition = "text")
     private String image;
 
-    @Column(name = "description", nullable = false, columnDefinition = "text")
+    @Column(name = "description", columnDefinition = "text")
     private String description;
 }
