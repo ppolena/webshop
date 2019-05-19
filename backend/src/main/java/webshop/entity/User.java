@@ -55,6 +55,18 @@ public class User extends BaseEntity {
     @Column(name = "password", nullable = false, columnDefinition = "text")
     private String password;
 
+    @Column(name = "phone", columnDefinition = "text")
+    private String phone;
+
+    @Column(name = "postalCode", columnDefinition = "text")
+    private String postalCode;
+
+    @Column(name = "city", columnDefinition = "text")
+    private String city;
+
+    @Column(name = "address", columnDefinition = "text")
+    private String address;
+
     @JsonIgnore
     public String getPassword() {
         return this.password;

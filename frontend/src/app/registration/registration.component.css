@@ -1,0 +1,18 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+mat-form-field {
+    width: 300px;
+}

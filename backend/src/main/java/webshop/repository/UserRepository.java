@@ -17,6 +17,8 @@ import java.util.UUID;
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends JpaRepository<User, UUID> {
 
+    String USER = "select u from User u where id = ?#{ principal?.id }";
+
     @Override
     @RestResource
     <S extends User> S save(S entity);
@@ -28,6 +30,10 @@ public interface UserRepository extends JpaRepository<User, UUID> {
     @Override
     @RestResource
     Page<User> findAll(Pageable pageable);
+
+    @RestResource(rel = "user", path = "user")
+    @Query(value = USER)
+    User getUser();
 
     @RestResource(path = "by-first-and-last-name", rel = "by-first-and-last-name")
     Optional<User> findByFirstNameAndLastName(@Param("firstname") String firstName, @Param("lastname") String lastName);

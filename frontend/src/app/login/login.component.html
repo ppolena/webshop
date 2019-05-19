@@ -1,57 +1,20 @@
-<div class="container">
-  <div class="text-center">
-    <p class="h3 mb-4">Bejelentkezés</p>
-  </div>
-  <div class="row d-flex justify-content-center" id="login-page">
-    <div *ngIf="error" class="notification is-danger">
-      Unsuccessful login attempt. Please try again.
-    </div>
-    <form [formGroup]="loginForm" novalidate>
-      <input
-        type="text"
-        class="form-control mb-4"
-        placeholder="Username"
-        id="username"
-        formControlName="username"
-        [class.is-danger]="username.hasError('required') && username.touched"
-      />
+<div id="container">
 
-      <p
-        *ngIf="username.hasError('required') && username.touched"
-        class="help is-danger"
-      >
-        Username is required
-      </p>
+  <h1>Login</h1>
+  
+  <form id="form" (submit)="login()">
+    <mat-form-field appearance="outline">
+      <mat-label>Email address</mat-label>
+      <input type="text" matInput placeholder="Email address" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">Valid email address required</mat-error>
+    </mat-form-field>
 
-      <input
-        type="password"
-        class="form-control mb-4"
-        placeholder="Password"
-        id="password"
-        formControlName="password"
-        [class.is-danger]="password.hasError('required') && password.touched"
-      />
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput placeholder="Password" [formControl]="password" required>
+      <mat-error *ngIf="password.invalid">Password at least 8 characters long required</mat-error>
+    </mat-form-field>
 
-      <p
-        *ngIf="password.hasError('required') && password.touched"
-        class="help is-danger"
-      >
-        Password is required
-      </p>
-
-      <button
-        class="btn btn-info btn-block my-4"
-        id="loginButton"
-        (click)="submit()"
-        [disabled]="!loginForm.valid"
-      >
-        Login
-      </button>
-
-      <p>
-        Nem vagy regisztrálva?
-        <a routerLink="/issues/registration">Regisztráció</a>
-      </p>
-    </form>
-  </div>
+    <button type="submit" mat-raised-button color="accent" [disabled]="email.invalid || password.invalid">Login</button>
+  </form>
 </div>

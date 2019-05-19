@@ -6,7 +6,6 @@ import { MainPageComponent } from '../main-page/main-page.component';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 import { LoginComponent } from '../login/login.component';
 import { RegistrationComponent } from '../registration/registration.component';
-import { SearchBarComponent } from '../search-bar/search-bar.component';
 
 const routes: Routes = [
   {

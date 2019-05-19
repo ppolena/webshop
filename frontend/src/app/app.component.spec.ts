@@ -6,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import {
   BrowserAnimationsModule,
-  NoopAnimationsModule,
 } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
@@ -22,6 +21,7 @@ import {
   MatSliderModule,
   MatSelectModule,
   MatInputModule,
+  MatSnackBarModule,
 } from '@angular/material';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -37,7 +37,6 @@ describe('AppComponent', () => {
       imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        NoopAnimationsModule,
         MatButtonModule,
         MatCheckboxModule,
         MatToolbarModule,
@@ -65,6 +64,7 @@ describe('AppComponent', () => {
         ReactiveFormsModule,
         FormsModule,
         HttpClientTestingModule,
+        MatSnackBarModule
       ],
     }).compileComponents();
   }));
@@ -82,8 +82,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain(
-      'Welcome to frontend!'
-    );
+    expect(compiled.querySelector('h1').textContent).toContain('Webshop');
   }));
 });

@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 
 import {
   BrowserAnimationsModule,
-  NoopAnimationsModule,
 } from '@angular/platform-browser/animations';
 
 import {
@@ -27,6 +26,9 @@ import {
   MatGridListModule,
   MatSelectModule,
   MatInputModule,
+  MatDialogModule,
+  MatSnackBarModule,
+  MatDialogRef,
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
@@ -43,6 +45,8 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ApiService } from './api.service';
+import { RegistrationFailedDialogComponent } from './registration-failed-dialog/registration-failed-dialog.component';
+import { LoginFailedDialogComponent } from './login-failed-dialog/login-failed-dialog.component';
 
 @NgModule({
   declarations: [
@@ -54,13 +58,14 @@ import { ApiService } from './api.service';
     LoginComponent,
     RegistrationComponent,
     SearchBarComponent,
+    RegistrationFailedDialogComponent,
+    LoginFailedDialogComponent,
   ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
@@ -89,11 +94,12 @@ import { ApiService } from './api.service';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
+    MatDialogModule,
+    MatSnackBarModule,
   ],
   exports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
@@ -116,6 +122,12 @@ import { ApiService } from './api.service';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
+    MatDialogModule,
+    MatSnackBarModule,
+  ],
+  entryComponents: [
+    RegistrationFailedDialogComponent,
+    LoginFailedDialogComponent,
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],

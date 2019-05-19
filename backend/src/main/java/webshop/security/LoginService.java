@@ -1,4 +1,4 @@
-package polenapeter.mercuryserver.service;
+package webshop.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -61,7 +61,7 @@ public class LoginService {
         securityContext.setAuthentication(authentication);
         HttpSession session = request.getSession(true);
         session.setAttribute(SPRING_SECURITY_CONTEXT_KEY, securityContext);
-        response.setHeader("Access-Control-Allow-Origin", IpAddressService.angularAddress);
+        response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
         response.setHeader("Access-Control-Allow-Credentials", "true");
         return true;
     }

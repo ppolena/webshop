@@ -1,4 +1,4 @@
-package polenapeter.mercuryserver.security;
+package webshop.security;
 
 import org.springframework.security.core.GrantedAuthority;
 

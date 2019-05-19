@@ -1,10 +1,10 @@
-package polenapeter.mercuryserver.controller;
+package webshop.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-import polenapeter.mercuryserver.service.LoginService;
+import webshop.security.LoginService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,9 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 public class AuthenticationController {
 
     private final LoginService loginService;
-
-    @PostMapping("/csrf")
-    public void csrf(){}
 
     @PostMapping("/authentication")
     public boolean authentication(){

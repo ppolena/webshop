@@ -6,9 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  private httpOptions = {
-    /*headers: new HttpHeaders({ 'Content-Type': 'application/json' }),*/
-  };
   readonly API_ROOT: string = 'http://localhost:8080/api';
   readonly PAGE_NUMBER: string = 'page=';
   readonly PAGE_SIZE: string = 'size=';
@@ -30,20 +27,36 @@ export class ApiService {
         '&' +
         this.PAGE_SIZE +
         size +
-        (sort ? '&' + this.SORT + sort : ''),
-      this.httpOptions
+        (sort ? '&' + this.SORT + sort : '')
     );
   }
 
   post(url: string, object: Object): Observable<any> {
-    return this.httpClient.post(this.API_ROOT + url, object, this.httpOptions);
+    return this.httpClient.post(this.API_ROOT + url, object);
   }
 
   patch(url: string, object: Object): Observable<any> {
-    return this.httpClient.patch(this.API_ROOT + url, object, this.httpOptions);
+    return this.httpClient.patch(this.API_ROOT + url, object);
   }
 
   delete(url: string): Observable<any> {
-    return this.httpClient.delete(this.API_ROOT + url, this.httpOptions);
+    return this.httpClient.delete(this.API_ROOT + url);
+  }
+
+  login(headers: HttpHeaders): Observable<any> {
+    return this.httpClient.post('http://localhost:8080/login', null, { headers: headers, withCredentials: true });
+  }
+
+  authenticate(): Observable<any> {
+    return this.httpClient.post('http://localhost:8080/authentication', null, { withCredentials: true });
+  }
+
+  getAuthenticatedUser(): Observable<any> {
+    return this.httpClient.get(this.API_ROOT + '/users/search/user', { withCredentials: true });
+  }
+
+  logout(): Observable<any> {
+    console.log('LOGOUT');
+    return this.httpClient.post('http://localhost:8080/logout', null, { withCredentials: true });
   }
 }
