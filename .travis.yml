@@ -1,4 +1,4 @@
-matrix:
+jobs:
   include:
     - language: java
       install: true
@@ -16,7 +16,7 @@ matrix:
           - $HOME/.gradle/wrapper/
 
     - language: node_js
-      node_js: 
+      node_js:
         - "8"
       addons:
         apt:
@@ -33,3 +33,17 @@ matrix:
         - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
         - npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
         - npm run compodoc
+      before_deploy:
+        - npm run build
+        - cd ..
+        - cd backend
+        - ./gradlew build
+      deploy:
+        - provider: releases
+          api_key: $GITHUB_TOKEN
+          file_glob: true
+          file: "/home/travis/build/ppolena/webshop/backend/build/libs/*"
+          skip_cleanup: true
+          on:
+            tags: true
+            branch: master

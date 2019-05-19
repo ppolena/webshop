@@ -1,0 +1,59 @@
+<div class="example-container">
+  <form class="searchBar form-inline md-form mr-auto mb-4" (submit)="search()">
+    <mat-form-field class="searchBarFormField">
+      <input
+        matInput
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        [formControl]="searchText"
+        name="searchText"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="searchBarFormField">
+      <mat-label>Type</mat-label>
+      <mat-select [(value)]="selectedType">
+        <mat-option *ngFor="let type of types" [value]="type.value">
+          {{ type.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div id="price">
+      <p id="priceTitle">Price</p>
+      <div>
+        <span>Min</span>
+        <mat-slider
+          invert
+          thumbLabel
+          [displayWith]="formatLabel"
+          min="-10000"
+          step="100"
+          max="0"
+          [(value)]="lower"
+        >
+        </mat-slider>
+        <mat-slider
+          thumbLabel
+          [displayWith]="formatLabel"
+          min="{{ lower * -1 }}"
+          step="100"
+          max="10000"
+          [(value)]="upper"
+        >
+        </mat-slider>
+        <span>Max</span>
+      </div>
+    </div>
+
+    <button mat-icon-button (click)="changeSortDirection()">
+      <mat-icon *ngIf="sortDirection === 'desc'">arrow_downward</mat-icon>
+      <mat-icon *ngIf="sortDirection === 'asc'">arrow_upward</mat-icon>
+    </button>
+
+    <button mat-mini-fab type="submit">
+      <mat-icon>search</mat-icon>
+    </button>
+  </form>
+</div>

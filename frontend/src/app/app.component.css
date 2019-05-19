@@ -2,8 +2,11 @@ mat-icon {
   position: right;
 }
 
-.icon-login-and-cart {
-  margin-left: 1000px;
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .mat-toolbar {

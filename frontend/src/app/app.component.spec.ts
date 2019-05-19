@@ -15,15 +15,20 @@ import {
   MatIconModule,
   MatCardModule,
   MatListModule,
-  MatMenuModule
+  MatMenuModule,
+  MatGridListModule,
+  MatPaginatorModule,
+  MatFormFieldModule,
+  MatSliderModule,
+  MatSelectModule,
+  MatInputModule,
 } from '@angular/material';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule }  from '@angular/common';
-
 import { AgmCoreModule } from '@agm/core';
-
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -48,7 +53,18 @@ describe('AppComponent', () => {
         MatMenuModule,
         FormsModule, 
         ReactiveFormsModule,
-        CommonModule
+        CommonModule,
+        MatCardModule,
+        MatIconModule,
+        MatGridListModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatSliderModule,
+        MatSelectModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientTestingModule,
       ],
     }).compileComponents();
   }));

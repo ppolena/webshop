@@ -19,7 +19,14 @@ import {
   MatCardModule,
   MatListModule,
   MatTabsModule,
-  MatMenuModule
+  MatMenuModule,
+  MatFormFieldModule,
+  MatTableModule,
+  MatSliderModule,
+  MatPaginatorModule,
+  MatGridListModule,
+  MatSelectModule,
+  MatInputModule,
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
@@ -34,7 +41,8 @@ import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { ApiServiceService } from './api-service.service';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { ApiService } from './api.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +52,8 @@ import { ApiServiceService } from './api-service.service';
     MainPageComponent,
     ContactFormComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    SearchBarComponent,
   ],
   imports: [
     FormsModule,
@@ -65,10 +74,21 @@ import { ApiServiceService } from './api-service.service';
     RouterModule,
     RouterTestingModule,
     RoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatTableModule,
     HttpClientModule,
     MatTabsModule,
     MatMenuModule,
-    CommonModule
+    CommonModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatSliderModule,
+    MatPaginatorModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatInputModule,
   ],
   exports: [
     BrowserModule,
@@ -82,11 +102,22 @@ import { ApiServiceService } from './api-service.service';
     MatListModule,
     RouterModule,
     RouterTestingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatTableModule,
     HttpClientModule,
     MatMenuModule,
-    CommonModule
+    CommonModule,
+    MatFormFieldModule,
+    MatMenuModule,
+    MatSliderModule,
+    MatPaginatorModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatInputModule,
   ],
-  providers: [ApiServiceService],
+  providers: [ApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

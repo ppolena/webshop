@@ -5,9 +5,9 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class ApiServiceService {
+export class ApiService {
   private httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    /*headers: new HttpHeaders({ 'Content-Type': 'application/json' }),*/
   };
   readonly API_ROOT: string = 'http://localhost:8080/api';
   readonly PAGE_NUMBER: string = 'page=';
