@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from '../main-page/main-page.component';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
+import { ShoppingCartComponent } from '../shopping-cart/shopping-cart.component';
+import { ShoppingFormComponent } from '../shopping-form/shopping-form.component';
 
 const routes: Routes = [
   {
@@ -23,6 +25,14 @@ const routes: Routes = [
   {
     path: 'issues/electronics',
     component: SearchBarComponent,
+  },
+  {
+    path: 'issues/shopping-cart',
+    component: ShoppingCartComponent,
+  },
+  {
+    path: 'issues/buying-form',
+    component: ShoppingFormComponent,
   },
 ];
 
