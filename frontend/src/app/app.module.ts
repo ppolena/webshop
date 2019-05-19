@@ -38,6 +38,8 @@ import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ApiService } from './api.service';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ShoppingFormComponent } from './shopping-form/shopping-form.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { ApiService } from './api.service';
     MainPageComponent,
     ContactFormComponent,
     SearchBarComponent,
+    ShoppingCartComponent,
+    ShoppingFormComponent,
   ],
   imports: [
     BrowserModule,

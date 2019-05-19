@@ -1,0 +1,29 @@
+<h1>Kosár</h1>
+<div class="cardList">
+  <mat-list-item *ngFor="let card of cards">
+    <mat-list>
+      <mat-card class="example-card">
+        <img
+          mat-card-image
+          src="{{ card.imgUrl }}"
+          alt="Photo of a Shiba Inu"
+          style="width: 300px;"
+        />
+        <mat-card-content>
+          <p style="font-weight: bold;">
+            {{ card.title }}
+          </p>
+          <p>
+            {{ card.details }}
+          </p>
+        </mat-card-content>
+        <mat-card-footer class="footer-card">
+          <mat-card-actions class="button">
+            <p>{{ card.price }}</p>
+            <button routerLink="/issues/buying-form" class="btn btn-success">Megveszem</button>
+          </mat-card-actions>
+        </mat-card-footer>
+      </mat-card>
+    </mat-list>
+  </mat-list-item>
+</div>
