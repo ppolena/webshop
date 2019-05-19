@@ -38,23 +38,31 @@ További segítséget az Angular CLI használatához az ng help parancs kiadás�
 
 Főoldal
 
-![mainpage](https://user-images.githubusercontent.com/22147849/57988369-bbb9bc80-7a8d-11e9-8450-ecfcae524029.PNG)
+<img width="1440" alt="Képernyőfotó 2019-05-20 - 0 25 21" src="https://user-images.githubusercontent.com/22857059/57989110-7b127100-7a96-11e9-90d6-a92a9a6e520a.png">
+<img width="1434" alt="Képernyőfotó 2019-05-20 - 0 25 36" src="https://user-images.githubusercontent.com/22857059/57989111-7b127100-7a96-11e9-92c1-20d55d974711.png">
+<img width="1435" alt="Képernyőfotó 2019-05-20 - 0 26 01" src="https://user-images.githubusercontent.com/22857059/57989112-7b127100-7a96-11e9-9563-2c202cb96cee.png">
+<img width="1440" alt="Képernyőfotó 2019-05-20 - 0 26 32" src="https://user-images.githubusercontent.com/22857059/57989113-7b127100-7a96-11e9-8d7e-41d354c944f1.png">
+<img width="1434" alt="Képernyőfotó 2019-05-20 - 0 26 43" src="https://user-images.githubusercontent.com/22857059/57989114-7bab0780-7a96-11e9-8f09-4770bf21a8b9.png">
+<img width="1438" alt="Képernyőfotó 2019-05-20 - 0 27 03" src="https://user-images.githubusercontent.com/22857059/57989115-7bab0780-7a96-11e9-8487-c005b38ee466.png">
+<img width="1427" alt="Képernyőfotó 2019-05-20 - 0 27 18" src="https://user-images.githubusercontent.com/22857059/57989116-7bab0780-7a96-11e9-894d-977b44fb799f.png">
+<img width="1434" alt="Képernyőfotó 2019-05-20 - 0 28 47" src="https://user-images.githubusercontent.com/22857059/57989117-7bab0780-7a96-11e9-8fc5-46a66455e128.png">
+<img width="1438" alt="Képernyőfotó 2019-05-20 - 0 28 56" src="https://user-images.githubusercontent.com/22857059/57989118-7bab0780-7a96-11e9-9830-24e75659385e.png">
 
-Termékek
 
-![electronics](https://user-images.githubusercontent.com/22147849/57988368-bb212600-7a8d-11e9-9b07-6a2dc2ead9de.PNG)
-  
-Kapcsolat
 
-![contact](https://user-images.githubusercontent.com/22147849/57988367-bb212600-7a8d-11e9-93d7-a83611e9b29c.PNG)
-  
-Kosár
 
-![shoppingcart](https://user-images.githubusercontent.com/22147849/57988370-bbb9bc80-7a8d-11e9-8284-f0b3397e3809.PNG)
-  
-Fizetés
 
-![buy](https://user-images.githubusercontent.com/22147849/57988366-bb212600-7a8d-11e9-9a6c-65bc626ccc78.PNG)
+
+
+
+![usecase](https://user-images.githubusercontent.com/22147849/57988371-bbb9bc80-7a8d-11e9-94c8-942495a8f468.png)
+
+
+
+
+
+
+
 
 ##### 4. Felhasználói dokumentáció
 Futtatáshoz szükséges operációs rendszer, hardver: tetszőleges
