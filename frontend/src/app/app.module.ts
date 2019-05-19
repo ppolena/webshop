@@ -26,11 +26,12 @@ import {
   MatGridListModule,
   MatSelectModule,
   MatInputModule,
-  MatDialogModule,
   MatSnackBarModule,
   MatDialogRef,
+  MAT_DIALOG_DATA,
 } from '@angular/material';
 
+import { MatDialogModule } from '@angular/material/dialog';
 import { AgmCoreModule } from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CommonModule }  from '@angular/common';
@@ -38,7 +39,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
+import { FavouriteCardsComponent, CardsDialog } from './favourite-cards/favourite-cards.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LoginComponent } from './login/login.component';
@@ -60,6 +61,7 @@ import { LoginFailedDialogComponent } from './login-failed-dialog/login-failed-d
     SearchBarComponent,
     RegistrationFailedDialogComponent,
     LoginFailedDialogComponent,
+    CardsDialog,
   ],
   imports: [
     FormsModule,
@@ -126,10 +128,11 @@ import { LoginFailedDialogComponent } from './login-failed-dialog/login-failed-d
     MatSnackBarModule,
   ],
   entryComponents: [
+    CardsDialog,
     RegistrationFailedDialogComponent,
     LoginFailedDialogComponent,
   ],
-  providers: [ApiService],
+  providers: [ApiService, { provide: MAT_DIALOG_DATA, useValue: {} }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

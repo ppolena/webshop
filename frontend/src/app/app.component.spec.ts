@@ -26,6 +26,9 @@ import {
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule }  from '@angular/common';
+
+import { MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
+
 import { AgmCoreModule } from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -64,8 +67,10 @@ describe('AppComponent', () => {
         ReactiveFormsModule,
         FormsModule,
         HttpClientTestingModule,
-        MatSnackBarModule
+        MatSnackBarModule,
+        MatDialogModule,
       ],
+      providers: [{ provide: MAT_DIALOG_DATA, useValue: {} }],
     }).compileComponents();
   }));
   it('should create the app', async(() => {
