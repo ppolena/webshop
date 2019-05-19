@@ -1,20 +1,24 @@
+<div id="content">
 <!--The content below is only a placeholder and can be replaced.-->
 
 <mat-toolbar class="toolbar">
   <div>
-    <button mat-button routerLink="/issues">Main page</button>
-    <button mat-button routerLink="/issues/electronics">Electronics</button>
-    <button mat-button routerLink="/issues/contact">Contact</button>
+    <button mat-button routerLink="/">Main page</button>
+    <button mat-button routerLink="/contact">Contact</button>
   </div>
   <div class="icon-login-and-cart">
     <button mat-button routerLink=""><mat-icon>shopping_cart</mat-icon></button>
-    <button mat-button routerLink="">
-      <mat-icon>account_circle</mat-icon>
-    </button>
+    <button *ngIf="!user" mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/login">Login</button>
+      <button mat-menu-item routerLink="/registration">Registration</button>
+    </mat-menu>
+    <span *ngIf="user">{{user.email}}</span>
+    <button *ngIf="user" mat-button color="warn" (click)="logout()"><mat-icon>exit_to_app</mat-icon></button>
   </div>
 </mat-toolbar>
 
-<h1>Welcome to frontend!</h1>
+<h1 id="title">Webshop</h1>
 
 <router-outlet></router-outlet>
 
@@ -80,3 +84,4 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+</div>

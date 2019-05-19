@@ -1,0 +1,20 @@
+<div id="container">
+
+  <h1>Login</h1>
+  
+  <form id="form" (submit)="login()">
+    <mat-form-field appearance="outline">
+      <mat-label>Email address</mat-label>
+      <input type="text" matInput placeholder="Email address" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">Valid email address required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput placeholder="Password" [formControl]="password" required>
+      <mat-error *ngIf="password.invalid">Password at least 8 characters long required</mat-error>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="accent" [disabled]="email.invalid || password.invalid">Login</button>
+  </form>
+</div>

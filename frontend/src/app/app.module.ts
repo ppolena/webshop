@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 
 import {
   BrowserAnimationsModule,
-  NoopAnimationsModule,
 } from '@angular/platform-browser/animations';
+
 import {
   MatButtonModule,
   MatCheckboxModule,
@@ -17,32 +17,37 @@ import {
   MatIconModule,
   MatCardModule,
   MatListModule,
+  MatTabsModule,
+  MatMenuModule,
   MatFormFieldModule,
   MatTableModule,
-  MatMenuModule,
   MatSliderModule,
   MatPaginatorModule,
   MatGridListModule,
   MatSelectModule,
   MatInputModule,
+  MatSnackBarModule,
+  MatDialogRef,
   MAT_DIALOG_DATA,
 } from '@angular/material';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { AgmCoreModule } from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CommonModule }  from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import {
-  FavouriteCardsComponent,
-  CardsDialog,
-} from './favourite-cards/favourite-cards.component';
+import { FavouriteCardsComponent, CardsDialog } from './favourite-cards/favourite-cards.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ApiService } from './api.service';
+import { RegistrationFailedDialogComponent } from './registration-failed-dialog/registration-failed-dialog.component';
+import { LoginFailedDialogComponent } from './login-failed-dialog/login-failed-dialog.component';
 
 @NgModule({
   declarations: [
@@ -51,13 +56,18 @@ import { ApiService } from './api.service';
     MainCarouselComponent,
     MainPageComponent,
     ContactFormComponent,
+    LoginComponent,
+    RegistrationComponent,
     SearchBarComponent,
+    RegistrationFailedDialogComponent,
+    LoginFailedDialogComponent,
     CardsDialog,
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
@@ -76,6 +86,9 @@ import { ApiService } from './api.service';
     MatFormFieldModule,
     MatTableModule,
     HttpClientModule,
+    MatTabsModule,
+    MatMenuModule,
+    CommonModule,
     MatFormFieldModule,
     MatMenuModule,
     MatSliderModule,
@@ -84,11 +97,11 @@ import { ApiService } from './api.service';
     MatSelectModule,
     MatInputModule,
     MatDialogModule,
+    MatSnackBarModule,
   ],
   exports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
@@ -102,6 +115,8 @@ import { ApiService } from './api.service';
     MatFormFieldModule,
     MatTableModule,
     HttpClientModule,
+    MatMenuModule,
+    CommonModule,
     MatFormFieldModule,
     MatMenuModule,
     MatSliderModule,
@@ -110,8 +125,13 @@ import { ApiService } from './api.service';
     MatSelectModule,
     MatInputModule,
     MatDialogModule,
+    MatSnackBarModule,
   ],
-  entryComponents: [CardsDialog],
+  entryComponents: [
+    CardsDialog,
+    RegistrationFailedDialogComponent,
+    LoginFailedDialogComponent,
+  ],
   providers: [ApiService, { provide: MAT_DIALOG_DATA, useValue: {} }],
   bootstrap: [AppComponent],
 })

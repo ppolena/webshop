@@ -44,7 +44,7 @@ public class InitializationService implements InitializingBean {
                     .setFirstName("User")
                     .setLastName(String.valueOf(i))
                     .setEmail("user" + i + "@webshop.hu")
-                    .setPassword("user" + i));
+                    .setPassword("userPassword" + i));
         }
         return userRepository.saveAll(users);
     }

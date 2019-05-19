@@ -4,26 +4,31 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { MainPageComponent } from '../main-page/main-page.component';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
-import { SearchBarComponent } from '../search-bar/search-bar.component';
+import { LoginComponent } from '../login/login.component';
+import { RegistrationComponent } from '../registration/registration.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/issues',
-    pathMatch: 'full',
-  },
-  {
-    path: 'issues',
     component: MainPageComponent,
   },
   {
-    path: 'issues/contact',
+    path: 'contact',
     component: ContactFormComponent,
   },
   {
-    path: 'issues/electronics',
-    component: SearchBarComponent,
+    path: 'login',
+    component: LoginComponent,
   },
+  {
+    path: 'registration',
+    component: RegistrationComponent,
+  },
+  { 
+    path: '**',
+    redirectTo: '', 
+    component: MainPageComponent 
+  }
 ];
 
 @NgModule({
