@@ -1,5 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FavouriteCardsComponent } from './favourite-cards.component';
+import {
+  FavouriteCardsComponent,
+  CardsDialog,
+} from './favourite-cards.component';
 import {
   MatCardModule,
   MatIconModule,
@@ -9,7 +12,10 @@ import {
   MatSliderModule,
   MatSelectModule,
   MatInputModule,
+  MatDialogModule,
+  MAT_DIALOG_DATA,
 } from '@angular/material';
+
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { ApiService } from '../api.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -25,7 +31,7 @@ describe('FavouriteCardsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FavouriteCardsComponent, SearchBarComponent],
+      declarations: [FavouriteCardsComponent, SearchBarComponent, CardsDialog],
       imports: [
         MatCardModule,
         MatIconModule,
@@ -40,8 +46,13 @@ describe('FavouriteCardsComponent', () => {
         HttpClientTestingModule,
         BrowserAnimationsModule,
         NoopAnimationsModule,
+        MatDialogModule,
       ],
-      providers: [ApiService],
+      providers: [
+        ApiService,
+        { provide: MAT_DIALOG_DATA, useValue: {} },
+        MatDialogModule,
+      ],
     }).compileComponents();
   }));
 

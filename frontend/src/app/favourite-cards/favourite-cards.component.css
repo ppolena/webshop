@@ -53,9 +53,20 @@ p {
 .footer-card {
   background: #374653;
   width: calc(100% + 32px);
-  height: 100px;
+  height: 150px;
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
+}
+
+.details-button {
+  background: #30a54a;
+  color: white;
+  border: #30a54a;
+}
+
+.cart {
+  color: white;
+  text-align: center;
 }
 
 .footer-card p {
@@ -71,6 +82,17 @@ p {
 
 .button {
   text-align: center;
+  margin-top: 15px;
+}
+
+mat-icon {
+  color: white;
+  text-align: center;
+}
+
+.basic-container {
+  width: 1500px;
+  height: 300px;
 }
 
 #paginator {

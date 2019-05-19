@@ -17,6 +17,8 @@ import {
   MatSliderModule,
   MatSelectModule,
   MatInputModule,
+  MatDialogModule,
+  MAT_DIALOG_DATA,
 } from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
@@ -57,7 +59,9 @@ describe('MainPageComponent', () => {
         HttpClientTestingModule,
         BrowserAnimationsModule,
         NoopAnimationsModule,
+        MatDialogModule,
       ],
+      providers: [{ provide: MAT_DIALOG_DATA, useValue: {} }],
     }).compileComponents();
   }));
 
