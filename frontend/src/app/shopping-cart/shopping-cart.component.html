@@ -20,12 +20,16 @@
         <mat-card-footer class="footer-card">
           <mat-card-actions class="button">
             <p>{{ card.price }}</p>
+            <button
+              mat-button
+              class="details-button"
+              routerLink="/issues/buying-form"
+            >
+              BUY IT
+            </button>
           </mat-card-actions>
         </mat-card-footer>
       </mat-card>
     </mat-list>
   </mat-list-item>
 </div>
-<p>
-    <a mat-stroked-button routerLink="/issues/buying-form">Buy now</a>
-</p>

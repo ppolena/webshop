@@ -8,77 +8,80 @@
             <p>
               <mat-form-field appearance="outline">
                 <mat-label>Name</mat-label>
-                <input matInput placeholder="Name">
+                <input matInput placeholder="Name" />
                 <mat-icon matSuffix>person</mat-icon>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label>E-mail</mat-label>
-                <input matInput placeholder="E-mail">
+                <input matInput placeholder="E-mail" />
                 <mat-icon matSuffix>email_outline</mat-icon>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
                 <mat-label>Phone</mat-label>
-                <input matInput placeholder="Phone">
+                <input matInput placeholder="Phone" />
                 <mat-icon matSuffix>phone</mat-icon>
               </mat-form-field>
             </p>
             <p>
               <mat-form-field appearance="outline">
-                  <mat-label>Address</mat-label>
-                  <input matInput placeholder="Address">
-                  <mat-icon matSuffix>room</mat-icon>
-                </mat-form-field>
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Address" />
+                <mat-icon matSuffix>room</mat-icon>
+              </mat-form-field>
             </p>
-          </form>  
+          </form>
 
           <h2>2. Payment</h2>
           <form>
-              <div>
-                <p><label>Card type</label></p>
-                <p>  
-                    <mat-radio-group>
-                        <mat-radio-button value="1">VISA</mat-radio-button>
-                        <mat-radio-button value="2">MasterCard</mat-radio-button>
-                        <mat-radio-button value="3">American Express</mat-radio-button>
-                      </mat-radio-group>
-                </p></div>
-              
+            <div>
+              <p><label>Card type</label></p>
               <p>
-                <mat-form-field appearance="outline">
-                  <mat-label>Card number</mat-label>
-                  <input matInput placeholder="Card number">
-                  <mat-icon matSuffix>payment</mat-icon>
-                </mat-form-field>
+                <mat-radio-group>
+                  <mat-radio-button value="1">VISA</mat-radio-button>
+                  <mat-radio-button value="2">MasterCard</mat-radio-button>
+                  <mat-radio-button value="3"
+                    >American Express</mat-radio-button
+                  >
+                </mat-radio-group>
               </p>
-              <p>
-                <mat-form-field appearance="outline">
-                  <mat-label>Card holder</mat-label>
-                  <input matInput placeholder="Card holder">
-                  <mat-icon matSuffix>account_box</mat-icon>
-                </mat-form-field>
-              </p>
-              <p>
-                <mat-form-field appearance="outline">
-                  <mat-label>Expiration date</mat-label>
-                  <input matInput placeholder="Expiration date">
-                  <mat-icon matSuffix>date_range</mat-icon>
-                </mat-form-field>
-              </p>
-              <p>
-                <mat-form-field appearance="outline">
-                  <mat-label>CVC/CVV</mat-label>
-                  <input matInput placeholder="CVC/CVV">
-                  <mat-icon matSuffix>payment</mat-icon>
-                </mat-form-field>
-              </p>
-              <p>
-                  <button mat-stroked-button>Pay now</button>
-              </p>
-            </form>
+            </div>
+
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label>Card number</mat-label>
+                <input matInput placeholder="Card number" />
+                <mat-icon matSuffix>payment</mat-icon>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label>Card holder</mat-label>
+                <input matInput placeholder="Card holder" />
+                <mat-icon matSuffix>account_box</mat-icon>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label>Expiration date</mat-label>
+                <input matInput placeholder="Expiration date" />
+                <mat-icon matSuffix>date_range</mat-icon>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field appearance="outline">
+                <mat-label>CVC/CVV</mat-label>
+                <input matInput placeholder="CVC/CVV" />
+                <mat-icon matSuffix>payment</mat-icon>
+              </mat-form-field>
+            </p>
+            <button mat-button class="details-button">BUY</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
+</section>

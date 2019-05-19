@@ -1,11 +1,23 @@
 p {
-    margin: 5px;
-    text-align: left;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: regular;
-  }
+  margin: 5px;
+  text-align: left;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: regular;
+}
 
-  .mat-radio-button ~ .mat-radio-button {
-    margin-left: 16px;
-  }
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.container {
+  align-content: center;
+  margin-left: 350px;
+}
+
+.details-button {
+  background: #30a54a;
+  color: white;
+  border: #30a54a;
+  margin-bottom: 50px;
+}
