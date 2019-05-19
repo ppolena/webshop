@@ -26,6 +26,18 @@ export class ShoppingCartComponent implements OnInit {
       details: 'Bla Bla Bla Bla',
       price: '1 500FT',
     },
+    {
+      imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+      title: 'Title 2',
+      details: 'Bla Bla Bla Bla',
+      price: '2 500FT',
+    },
+    {
+      imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+      title: 'Title 3',
+      details: 'Bla Bla Bla Bla',
+      price: '3 500FT',
+    },
   ];
 
 }

@@ -25,6 +25,7 @@ import {
   MatGridListModule,
   MatSelectModule,
   MatInputModule,
+  MatRadioModule
 } from '@angular/material';
 
 import { AgmCoreModule } from '@agm/core';
@@ -81,6 +82,7 @@ import { ShoppingFormComponent } from './shopping-form/shopping-form.component';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
+    MatRadioModule
   ],
   exports: [
     BrowserModule,
@@ -106,6 +108,7 @@ import { ShoppingFormComponent } from './shopping-form/shopping-form.component';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
+    MatRadioModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],

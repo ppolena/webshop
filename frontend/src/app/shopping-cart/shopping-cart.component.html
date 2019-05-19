@@ -1,4 +1,4 @@
-<h1>Kosár</h1>
+<h1>Shopping cart</h1>
 <div class="cardList">
   <mat-list-item *ngFor="let card of cards">
     <mat-list>
@@ -20,10 +20,12 @@
         <mat-card-footer class="footer-card">
           <mat-card-actions class="button">
             <p>{{ card.price }}</p>
-            <button routerLink="/issues/buying-form" class="btn btn-success">Megveszem</button>
           </mat-card-actions>
         </mat-card-footer>
       </mat-card>
     </mat-list>
   </mat-list-item>
 </div>
+<p>
+    <a mat-stroked-button routerLink="/issues/buying-form">Buy now</a>
+</p>
