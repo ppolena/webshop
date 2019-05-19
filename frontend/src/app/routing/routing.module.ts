@@ -11,29 +11,25 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/issues',
-    pathMatch: 'full',
-  },
-  {
-    path: 'issues',
     component: MainPageComponent,
   },
   {
-    path: 'issues/contact',
+    path: 'contact',
     component: ContactFormComponent,
   },
   {
-    path: 'issues/login',
+    path: 'login',
     component: LoginComponent,
   },
   {
-    path: 'issues/registration',
+    path: 'registration',
     component: RegistrationComponent,
   },
-  {
-    path: 'issues/electronics',
-    component: SearchBarComponent,
-  },
+  { 
+    path: '**',
+    redirectTo: '', 
+    component: MainPageComponent 
+  }
 ];
 
 @NgModule({
