@@ -19,6 +19,7 @@ import {
   MatInputModule,
   MatDialogModule,
   MAT_DIALOG_DATA,
+  MatSnackBarModule,
 } from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
@@ -60,6 +61,7 @@ describe('MainPageComponent', () => {
         BrowserAnimationsModule,
         NoopAnimationsModule,
         MatDialogModule,
+        MatSnackBarModule
       ],
       providers: [{ provide: MAT_DIALOG_DATA, useValue: {} }],
     }).compileComponents();

@@ -14,6 +14,7 @@ import {
   MatInputModule,
   MatDialogModule,
   MAT_DIALOG_DATA,
+  MatSnackBarModule,
 } from '@angular/material';
 
 import { SearchBarComponent } from '../search-bar/search-bar.component';
@@ -47,6 +48,7 @@ describe('FavouriteCardsComponent', () => {
         BrowserAnimationsModule,
         NoopAnimationsModule,
         MatDialogModule,
+        MatSnackBarModule,
       ],
       providers: [
         ApiService,

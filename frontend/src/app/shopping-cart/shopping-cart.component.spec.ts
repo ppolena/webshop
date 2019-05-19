@@ -4,7 +4,11 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { ShoppingCartComponent } from './shopping-cart.component';
 
-import { MatCardModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatCardModule, MatIconModule, MatListModule, MatGridListModule, MatPaginatorModule, MatFormFieldModule, MatSliderModule, MatSelectModule, MatInputModule, MatDialogModule } from '@angular/material';
+import { ApiService } from '../api.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ShoppingCartComponent', () => {
   let component: ShoppingCartComponent;
@@ -16,10 +20,25 @@ describe('ShoppingCartComponent', () => {
       imports: [
         MatCardModule,
         MatIconModule,
-        MatListModule,
+        MatGridListModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatSliderModule,
+        MatSelectModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientTestingModule,
+        BrowserAnimationsModule,
+        NoopAnimationsModule,
+        MatDialogModule,
         RouterModule,
         RouterTestingModule,
+
       ],
+      providers: [
+        ApiService,
+      ]
     }).compileComponents();
   }));
 

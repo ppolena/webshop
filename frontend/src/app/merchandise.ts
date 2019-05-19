@@ -6,4 +6,10 @@ export default class Merchandise {
   image: string;
   thumbnail: string;
   description: string;
+
+  _links: {
+    self:{
+        href: string;
+    }
+  }
 }

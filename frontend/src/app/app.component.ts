@@ -3,6 +3,7 @@ import { ApiService } from './api.service';
 import { User } from './user';
 import { LoginService } from './login.service';
 import { MatSnackBar } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   lng: number = 19.023769;
   user: User;
 
-  constructor(private loginService: LoginService, private snackBar: MatSnackBar){
+  constructor(private loginService: LoginService, private snackBar: MatSnackBar, private router: Router,){
     this.loginService.user.subscribe((user: User) => {
       this.user = user;
     });
@@ -28,6 +29,7 @@ export class AppComponent {
         duration: 5000,
         panelClass: 'snackbar'
       });
+      this.router.navigate(['']);
     } else {
       this.snackBar.open('Logout failed!', 'Close', {
         duration: 5000,

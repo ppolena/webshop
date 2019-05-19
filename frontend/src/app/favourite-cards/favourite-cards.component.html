@@ -1,7 +1,7 @@
 <div id="container">
   <app-search-bar (queryParams)="setQueryParams($event)"></app-search-bar>
 
-  <mat-grid-list cols="3" rowHeight="1:1.15">
+  <mat-grid-list cols="3" rowHeight="1:1.25">
     <mat-grid-tile *ngFor="let merchandise of merchandiseList">
       <mat-card class="example-card">
         <img class="cardImage" mat-card-image src="{{ merchandise.image }}" />
@@ -15,16 +15,16 @@
         </mat-card-content>
         <mat-card-footer class="footer-card">
           <mat-card-actions class="button">
-            <p>{{ merchandise.price }}</p>
+            <p>&euro;{{ merchandise.price }}</p>
             <button
               mat-button
               class="details-button"
               (click)="openDialog(merchandise)"
             >
               Details</button
-            ><br />
-            <button mat-button class="cart">
-              <mat-icon>star_rate </mat-icon>Cart
+            >
+            <button *ngIf="user" mat-button class="cart" (click)="addToCart(merchandise)">
+              <mat-icon>add_shopping_cart</mat-icon> Add to cart
             </button>
           </mat-card-actions>
         </mat-card-footer>
