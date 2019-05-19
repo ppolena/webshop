@@ -7,12 +7,12 @@
     <button mat-button routerLink="/contact">Contact</button>
   </div>
   <div class="icon-login-and-cart">
-    <button mat-button routerLink=""><mat-icon>shopping_cart</mat-icon></button>
     <button *ngIf="!user" mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon></button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item routerLink="/login">Login</button>
       <button mat-menu-item routerLink="/registration">Registration</button>
     </mat-menu>
+    <button *ngIf="user" mat-button routerLink="/cart"><mat-icon>shopping_cart</mat-icon></button>
     <span *ngIf="user">{{user.email}}</span>
     <button *ngIf="user" mat-button color="warn" (click)="logout()"><mat-icon>exit_to_app</mat-icon></button>
   </div>

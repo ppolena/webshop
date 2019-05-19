@@ -1,4 +1,5 @@
 export class User {
+    id: string;
     firstName: string;
     lastName: string;
     password: string;
@@ -7,6 +8,12 @@ export class User {
     postalCode: string;
     city: string;
     address: string;
+
+    _links: {
+        self:{
+            href: string;
+        }
+    }
 
     constructor(firstName: string, lastName: string, password: string, email: string, phone: string, postalCode: string, city: string, address: string){
         this.firstName = firstName;

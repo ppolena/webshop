@@ -41,6 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FavouriteCardsComponent, CardsDialog } from './favourite-cards/favourite-cards.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ShoppingFormComponent } from './shopping-form/shopping-form.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -56,6 +58,8 @@ import { LoginFailedDialogComponent } from './login-failed-dialog/login-failed-d
     MainCarouselComponent,
     MainPageComponent,
     ContactFormComponent,
+    ShoppingCartComponent,
+    ShoppingFormComponent,
     LoginComponent,
     RegistrationComponent,
     SearchBarComponent,

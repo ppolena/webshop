@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 import { MAT_DIALOG_DATA } from '@angular/material';
 
 import { QueryParams } from '../search-bar/query-params';
@@ -7,6 +7,8 @@ import { ApiService } from '../api.service';
 import { MerchandiseList } from '../merchandise-list';
 import Merchandise from '../merchandise';
 import { PageEvent } from '@angular/material';
+import { User } from '../user';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-favourite-cards',
@@ -14,13 +16,18 @@ import { PageEvent } from '@angular/material';
   styleUrls: ['./favourite-cards.component.css'],
 })
 export class FavouriteCardsComponent implements OnInit {
+  user: User;
   queryParams: QueryParams;
   merchandiseList: Array<Merchandise>;
   page: number = 0;
   size: number = 12;
   totalElements: number;
 
-  constructor(public dialog: MatDialog, private apiService: ApiService) {}
+  constructor(public dialog: MatDialog, private apiService: ApiService, private loginService: LoginService, private snackBar: MatSnackBar) {
+    this.loginService.user.subscribe((user: User) => {
+      this.user = user;
+    })
+  }
 
   openDialog(merchandise: Merchandise) {
     const dialogRef = this.dialog.open(CardsDialog, { data: merchandise });
@@ -33,6 +40,16 @@ export class FavouriteCardsComponent implements OnInit {
   ngOnInit() {
     this.queryParams = new QueryParams('', 'ALL', 0, 100000, 'price,asc');
     this.loadMerchandise();
+  }
+
+  addToCart(merchandise: Merchandise){
+    this.apiService.post('/cart-items', {merchandise: merchandise._links.self.href, user: this.user._links.self.href, amount: 1}).subscribe(() => {
+      console.log('Added to cart');
+      this.snackBar.open('Merchandise added to cart!', 'Close', {
+        duration: 5000,
+        panelClass: 'snackbar'
+      });
+    })
   }
 
   setQueryParams(queryParams: QueryParams) {

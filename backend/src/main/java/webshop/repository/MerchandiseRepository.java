@@ -33,6 +33,11 @@ public interface MerchandiseRepository extends JpaRepository<Merchandise, UUID> 
     @RestResource(path = "by-type", rel = "by-type")
     Page<Merchandise> findByType(@Param("type") MerchandiseType type, Pageable pageable);
 
+    @RestResource(path = "by-user-and-cart", rel = "by-user-and-cart")
+    @Query(value = "select m from Merchandise m join CartItem c on (c.user.id = ?1 and c.merchandise.id = m.id)",
+            countQuery = "select count(m.id) from Merchandise m join CartItem c on (c.user.id = ?1 and c.merchandise.id = m.id)")
+    Page<Merchandise> findByCartItem(@Param("uid") UUID uid, Pageable pageable);
+
     @RestResource(path = "by-search-text-and-price-between", rel = "by-search-text-and-price-between")
     @Query(
             value = "select m " +
