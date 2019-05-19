@@ -6,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import {
   BrowserAnimationsModule,
-  NoopAnimationsModule,
 } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
@@ -15,11 +14,24 @@ import {
   MatIconModule,
   MatCardModule,
   MatListModule,
+  MatMenuModule,
+  MatGridListModule,
+  MatPaginatorModule,
+  MatFormFieldModule,
+  MatSliderModule,
+  MatSelectModule,
+  MatInputModule,
+  MatSnackBarModule,
 } from '@angular/material';
 
-import { AgmCoreModule } from '@agm/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule }  from '@angular/common';
 
+import { MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
+
+import { AgmCoreModule } from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -28,7 +40,6 @@ describe('AppComponent', () => {
       imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        NoopAnimationsModule,
         MatButtonModule,
         MatCheckboxModule,
         MatToolbarModule,
@@ -41,7 +52,25 @@ describe('AppComponent', () => {
         MatListModule,
         RouterModule,
         RouterTestingModule,
+        MatMenuModule,
+        FormsModule, 
+        ReactiveFormsModule,
+        CommonModule,
+        MatCardModule,
+        MatIconModule,
+        MatGridListModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatSliderModule,
+        MatSelectModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientTestingModule,
+        MatSnackBarModule,
+        MatDialogModule,
       ],
+      providers: [{ provide: MAT_DIALOG_DATA, useValue: {} }],
     }).compileComponents();
   }));
   it('should create the app', async(() => {
@@ -58,8 +87,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain(
-      'Welcome to frontend!'
-    );
+    expect(compiled.querySelector('h1').textContent).toContain('Webshop');
   }));
 });

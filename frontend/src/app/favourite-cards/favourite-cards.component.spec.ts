@@ -1,11 +1,29 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
+import {
+  FavouriteCardsComponent,
+  CardsDialog,
+} from './favourite-cards.component';
+import {
+  MatCardModule,
+  MatIconModule,
+  MatGridListModule,
+  MatPaginatorModule,
+  MatFormFieldModule,
+  MatSliderModule,
+  MatSelectModule,
+  MatInputModule,
+  MatDialogModule,
+  MAT_DIALOG_DATA,
+} from '@angular/material';
 
-import { FavouriteCardsComponent } from './favourite-cards.component';
-
-import { MatCardModule, 
-         MatIconModule,
-         MatListModule} from '@angular/material';
+import { SearchBarComponent } from '../search-bar/search-bar.component';
+import { ApiService } from '../api.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('FavouriteCardsComponent', () => {
   let component: FavouriteCardsComponent;
@@ -13,13 +31,29 @@ describe('FavouriteCardsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FavouriteCardsComponent ],
-      imports: [ MatCardModule,
-                 MatIconModule,
-                 MatListModule,
-                 RouterModule]
-    })
-    .compileComponents();
+      declarations: [FavouriteCardsComponent, SearchBarComponent, CardsDialog],
+      imports: [
+        MatCardModule,
+        MatIconModule,
+        MatGridListModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatSliderModule,
+        MatSelectModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientTestingModule,
+        BrowserAnimationsModule,
+        NoopAnimationsModule,
+        MatDialogModule,
+      ],
+      providers: [
+        ApiService,
+        { provide: MAT_DIALOG_DATA, useValue: {} },
+        MatDialogModule,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

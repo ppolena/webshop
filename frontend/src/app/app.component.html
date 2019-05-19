@@ -1,20 +1,24 @@
+<div id="content">
 <!--The content below is only a placeholder and can be replaced.-->
 
-<mat-toolbar>
-  <button mat-button routerLink="/issues">Kezdőlap</button>
-  <button mat-button routerLink="/issues">Termékek</button>
-  <button mat-button routerLink="/issues/contact">Kapcsolat</button>
+<mat-toolbar class="toolbar">
+  <div>
+    <button mat-button routerLink="/">Main page</button>
+    <button mat-button routerLink="/contact">Contact</button>
+  </div>
   <div class="icon-login-and-cart">
-    <button mat-button routerLink="issues/cart">
-      <mat-icon>shopping_cart</mat-icon>
-    </button>
-    <button mat-button routerLink="">
-      <mat-icon>account_circle</mat-icon>
-    </button>
+    <button mat-button routerLink="/cart"><mat-icon>shopping_cart</mat-icon></button>
+    <button *ngIf="!user" mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/login">Login</button>
+      <button mat-menu-item routerLink="/registration">Registration</button>
+    </mat-menu>
+    <span *ngIf="user">{{user.email}}</span>
+    <button *ngIf="user" mat-button color="warn" (click)="logout()"><mat-icon>exit_to_app</mat-icon></button>
   </div>
 </mat-toolbar>
 
-<h1>Welcome to frontend!</h1>
+<h1 id="title">Webshop</h1>
 
 <router-outlet></router-outlet>
 
@@ -27,7 +31,7 @@
       <!-- Grid column -->
       <div class="col-md-6 mt-md-0 mt-3">
         <!-- Content -->
-        <h5 class="text-uppercase">ELÉRHETŐSÉG</h5>
+        <h5 class="text-uppercase">Contact</h5>
 
         <!-- this creates a google map on the page with the given lat/lng from -->
         <!-- the component as the initial center of the map: -->
@@ -45,7 +49,7 @@
 
         <mat-list class="list-unstyled">
           <mat-list-item>
-            <mat-icon>place</mat-icon> 1125 Budapest Alkotás út 3.
+            <mat-icon>place</mat-icon> 1125 Budapest Alkotás street 3.
           </mat-list-item>
           <mat-list-item>
             <mat-icon>mobile_screen_share</mat-icon> (+36 30) 211 5678
@@ -55,7 +59,11 @@
           </mat-list-item>
           <mat-list-item>
             <div class="example-button-row">
-              <a mat-raised-button routerLink=".">ÚTVONAL TERVEZÉS</a>
+              <a
+                mat-raised-button
+                href="https://www.google.com/maps/dir//Budapest,+Alkot%C3%A1s+u.+3,+1123/@47.5004014,19.0214897,17z/data=!4m17!1m7!3m6!1s0x4741dc2090d2f1ff:0x6ba416e94225fa5b!2sBudapest,+Alkot%C3%A1s+u.+3,+1123!3b1!8m2!3d47.5004014!4d19.0236784!4m8!1m0!1m5!1m1!1s0x4741dc2090d2f1ff:0x6ba416e94225fa5b!2m2!1d19.0236784!2d47.5004014!3e3"
+                >DESTINATION</a
+              >
             </div>
           </mat-list-item>
         </mat-list>
@@ -76,3 +84,4 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+</div>

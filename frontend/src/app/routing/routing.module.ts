@@ -6,29 +6,39 @@ import { MainPageComponent } from '../main-page/main-page.component';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 import { ShoppingCartComponent } from '../shopping-cart/shopping-cart.component';
 import { ShoppingFormComponent } from '../shopping-form/shopping-form.component';
+import { LoginComponent } from '../login/login.component';
+import { RegistrationComponent } from '../registration/registration.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/issues',
-    pathMatch: 'full',
-  },
-  {
-    path: 'issues',
     component: MainPageComponent,
   },
   {
-    path: 'issues/contact',
+    path: 'contact',
     component: ContactFormComponent,
   },
   {
-    path: 'issues/cart',
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'cart',
     component: ShoppingCartComponent,
   },
   {
-    path: 'issues/buying-form',
+    path: 'buying-form',
     component: ShoppingFormComponent,
   },
+  {
+    path: 'registration',
+    component: RegistrationComponent,
+  },
+  { 
+    path: '**',
+    redirectTo: '', 
+    component: MainPageComponent 
+  }
 ];
 
 @NgModule({

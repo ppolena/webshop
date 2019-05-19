@@ -7,7 +7,26 @@ import { FavouriteCardsComponent } from '../favourite-cards/favourite-cards.comp
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
-import { MatCardModule, MatIconModule, MatListModule } from '@angular/material';
+import {
+  MatCardModule,
+  MatIconModule,
+  MatListModule,
+  MatGridListModule,
+  MatPaginatorModule,
+  MatFormFieldModule,
+  MatSliderModule,
+  MatSelectModule,
+  MatInputModule,
+  MatDialogModule,
+  MAT_DIALOG_DATA,
+} from '@angular/material';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SearchBarComponent } from '../search-bar/search-bar.component';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('MainPageComponent', () => {
   let component: MainPageComponent;
@@ -19,6 +38,7 @@ describe('MainPageComponent', () => {
         MainPageComponent,
         MainCarouselComponent,
         FavouriteCardsComponent,
+        SearchBarComponent,
       ],
       imports: [
         CarouselModule.forRoot(),
@@ -26,7 +46,22 @@ describe('MainPageComponent', () => {
         MatCardModule,
         MatIconModule,
         MatListModule,
+        MatCardModule,
+        MatIconModule,
+        MatGridListModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatSliderModule,
+        MatSelectModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientTestingModule,
+        BrowserAnimationsModule,
+        NoopAnimationsModule,
+        MatDialogModule,
       ],
+      providers: [{ provide: MAT_DIALOG_DATA, useValue: {} }],
     }).compileComponents();
   }));
 

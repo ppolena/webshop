@@ -7,13 +7,17 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import webshop.entity.User;
 
 import java.util.Optional;
 import java.util.UUID;
 
+@CrossOrigin
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends JpaRepository<User, UUID> {
+
+    String USER = "select u from User u where id = ?#{ principal?.id }";
 
     @Override
     @RestResource
@@ -26,6 +30,10 @@ public interface UserRepository extends JpaRepository<User, UUID> {
     @Override
     @RestResource
     Page<User> findAll(Pageable pageable);
+
+    @RestResource(rel = "user", path = "user")
+    @Query(value = USER)
+    User getUser();
 
     @RestResource(path = "by-first-and-last-name", rel = "by-first-and-last-name")
     Optional<User> findByFirstNameAndLastName(@Param("firstname") String firstName, @Param("lastname") String lastName);

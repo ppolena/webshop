@@ -1,19 +1,34 @@
+#content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
 mat-icon {
   position: right;
 }
 
-.icon-login-and-cart {
-  margin-left: 1000px;
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .mat-toolbar {
   color: white;
   background: #374653;
-  margin-bottom: 50px;
 }
 
 .list-unstyled {
   margin-top: 25px;
+}
+
+#title {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 500%;
 }
 
 mat-list {
