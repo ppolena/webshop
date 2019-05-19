@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { MAT_DIALOG_DATA } from '@angular/material';
+
 import { QueryParams } from '../search-bar/query-params';
 import { ApiService } from '../api.service';
 import { MerchandiseList } from '../merchandise-list';
@@ -17,7 +20,19 @@ export class FavouriteCardsComponent implements OnInit {
   size: number = 12;
   totalElements: number;
 
-  constructor(private apiService: ApiService) {}
+  constructor(
+    public dialog: MatDialog,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private apiService: ApiService
+  ) {}
+
+  openDialog() {
+    const dialogRef = this.dialog.open(CardsDialog);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 
   ngOnInit() {
     this.queryParams = new QueryParams('', 'ALL', 0, 100000, 'price,asc');
@@ -78,3 +93,9 @@ export class FavouriteCardsComponent implements OnInit {
       });
   }
 }
+
+@Component({
+  selector: 'cards-dialog',
+  templateUrl: 'cards-dialog.html',
+})
+export class CardsDialog {}

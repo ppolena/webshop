@@ -21,7 +21,10 @@ import {
   MatSliderModule,
   MatSelectModule,
   MatInputModule,
+  MAT_DIALOG_DATA,
 } from '@angular/material';
+
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -60,7 +63,9 @@ describe('AppComponent', () => {
         ReactiveFormsModule,
         FormsModule,
         HttpClientTestingModule,
+        MatDialogModule,
       ],
+      providers: [{ provide: MAT_DIALOG_DATA, useValue: {} }],
     }).compileComponents();
   }));
   it('should create the app', async(() => {

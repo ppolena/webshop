@@ -16,12 +16,11 @@
         <mat-card-footer class="footer-card">
           <mat-card-actions class="button">
             <p>{{ merchandise.price }}</p>
-            <button mat-button style="color: white; text-align: center;">
-              <mat-icon
-                style="color: white;
-                text-align: center;"
-                >star_rate </mat-icon
-              >Tedd a kosárba!
+            <button mat-button class="details-button" (click)="openDialog()">
+              Details</button
+            ><br />
+            <button mat-button class="cart">
+              <mat-icon>star_rate </mat-icon>Tedd a kosárba!
             </button>
           </mat-card-actions>
         </mat-card-footer>

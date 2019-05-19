@@ -25,15 +25,20 @@ import {
   MatGridListModule,
   MatSelectModule,
   MatInputModule,
+  MAT_DIALOG_DATA,
 } from '@angular/material';
 
+import { MatDialogModule } from '@angular/material/dialog';
 import { AgmCoreModule } from '@agm/core';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { FavouriteCardsComponent } from './favourite-cards/favourite-cards.component';
+import {
+  FavouriteCardsComponent,
+  CardsDialog,
+} from './favourite-cards/favourite-cards.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
@@ -47,6 +52,7 @@ import { ApiService } from './api.service';
     MainPageComponent,
     ContactFormComponent,
     SearchBarComponent,
+    CardsDialog,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +83,7 @@ import { ApiService } from './api.service';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
+    MatDialogModule,
   ],
   exports: [
     BrowserModule,
@@ -102,8 +109,10 @@ import { ApiService } from './api.service';
     MatGridListModule,
     MatSelectModule,
     MatInputModule,
+    MatDialogModule,
   ],
-  providers: [ApiService],
+  entryComponents: [CardsDialog],
+  providers: [ApiService, { provide: MAT_DIALOG_DATA, useValue: {} }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
