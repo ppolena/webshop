@@ -5,6 +5,7 @@ import { MerchandiseList } from '../merchandise-list';
 import { QueryParams } from '../search-bar/query-params';
 import { User } from '../user';
 import { LoginService } from '../login.service';
+import { PageEvent } from '@angular/material';
 
 export interface Section {
   imgUrl: string;
@@ -38,6 +39,12 @@ export class ShoppingCartComponent implements OnInit {
     if(this.user){
       this.loadCart();
     }
+  }
+
+  public showNewPage(pageEvent: PageEvent) {
+    this.page = pageEvent.pageIndex;
+    this.size = pageEvent.pageSize;
+    this.loadCart();
   }
 
   loadCart(){
