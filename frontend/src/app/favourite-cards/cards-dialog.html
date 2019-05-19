@@ -1,12 +1,14 @@
-<h2 mat-dialog-title>
-  Valami
+<h2 mat-dialog-title class="let merchandise of merchandiseList">
+  {{ data.name }}
 </h2>
-<mat-dialog-content class="mat-typography">
-  <img src="//ae01.alicdn.com/kf/HTB18vjsU9zqK1RjSZPx7634tVXaa.png" />
-  <h2>Valami</h2>
+<mat-dialog-content
+  class="mat-typography"
+  class="let merchandise of merchandiseList"
+>
+  <img src="{{ data.image }}" />
 
   <p>
-    Valami
+    {{ data.description }}
   </p>
 
   <p>BLorem ipsum dl</p>
@@ -44,7 +46,7 @@
   </p>
 
   <h2>Price:</h2>
-  <p>Valami</p>
+  <p>{{ data.price }}</p>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>

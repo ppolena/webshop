@@ -20,17 +20,13 @@ export class FavouriteCardsComponent implements OnInit {
   size: number = 12;
   totalElements: number;
 
-  constructor(
-    public dialog: MatDialog,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private apiService: ApiService
-  ) {}
+  constructor(public dialog: MatDialog, private apiService: ApiService) {}
 
-  openDialog() {
-    const dialogRef = this.dialog.open(CardsDialog);
+  openDialog(merchandise: Merchandise) {
+    const dialogRef = this.dialog.open(CardsDialog, { data: merchandise });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      console.log(result);
     });
   }
 
@@ -98,4 +94,11 @@ export class FavouriteCardsComponent implements OnInit {
   selector: 'cards-dialog',
   templateUrl: 'cards-dialog.html',
 })
-export class CardsDialog {}
+export class CardsDialog {
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: Merchandise,
+    private apiService: ApiService
+  ) {}
+
+  ngOnInit() {}
+}
